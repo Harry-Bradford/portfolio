@@ -36,21 +36,26 @@ nav {
     align-items: center;
 }
 
-.nav-list a {
+nav a {
     height: 100%;
     padding: 0 50px;
     display: flex;
     align-items: center;
     color: var(--colorPrimary);
     text-decoration: none;
+    transition: color 400ms ease;
 }
 
-.nav-list a:not(.no-highlight):hover {
+nav a:hover {
     color: var(--redAccent);
 }
 
-nav li:first-child {
+nav .home-li {
     margin-right: auto;
+}
+
+#homepage-logo {
+    height: 65%
 }
 
 .open-sidebar {
@@ -58,11 +63,11 @@ nav li:first-child {
     top: 0;
     right: 0;
     height: 100%;
-    width: 20%;
+    width: 100%;
     z-index: 999;
-    background-color: #353535;
+    background-color: var(--colorSecondary);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -73,13 +78,6 @@ nav li:first-child {
     justify-content: flex-start;
     height: 2rem;
     display: flex;
-}
-
-.open-sidebar a {
-    display: flex;
-    align-items: center;
-    color: #e9e8e5;
-    text-decoration: none;
 }
 
 main {
