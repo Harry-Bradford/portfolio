@@ -1,0 +1,88 @@
+:root {
+    --colorPrimary: #e9e8e5;
+    --colorSecondary: #353535;
+    --redAccent: #b34934;
+    --blueAccent: #4895ba;
+    --ff: "Titillium Web", serif;
+}
+
+body {
+    background-color: var(--colorPrimary);
+}
+
+header {
+    background-color: var(--colorSecondary);
+}
+
+nav {
+    font-family: var(--ff);
+    font-optical-sizing: auto;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.nav-list {
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list a {
+    height: 100%;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    color: var(--colorPrimary);
+    text-decoration: none;
+}
+
+.nav-list a:not(.no-highlight):hover {
+    color: var(--redAccent);
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.open-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 20%;
+    z-index: 999;
+    background-color: #353535;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.open-sidebar li {
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 2rem;
+    display: flex;
+}
+
+.open-sidebar a {
+    display: flex;
+    align-items: center;
+    color: #e9e8e5;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
