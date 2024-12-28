@@ -6,12 +6,18 @@
     --ff: "Titillium Web", serif;
 }
 
-body {
-    background-color: var(--colorPrimary);
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
-header {
-    background-color: var(--colorSecondary);
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--colorPrimary);
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 nav {
@@ -20,12 +26,17 @@ nav {
     font-size: 24px;
     font-weight: bold;
     font-style: normal;
+    background-color: var(--colorSecondary);
+    /* border-bottom: 1px solid var(--colorPrimary) */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
 }
 
 .nav-list {
-    height: 4rem;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -38,12 +49,16 @@ nav {
 
 nav a {
     height: 100%;
-    padding: 0 50px;
+    padding: 1em 1em;
     display: flex;
     align-items: center;
     color: var(--colorPrimary);
     text-decoration: none;
     transition: color 400ms ease;
+}
+
+nav li:first-child {
+    margin-right: auto;
 }
 
 nav a:hover {
@@ -54,30 +69,34 @@ nav .home-li {
     margin-right: auto;
 }
 
-#homepage-logo {
-    height: 65%
-}
-
-.open-sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 999;
-    background-color: var(--colorSecondary);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.open-sidebar li {
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 2rem;
+nav li {
     display: flex;
+}
+
+nav a.active-link {
+    color: var(--redAccent);
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: min(15em, 100%);
+    }
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+    }
+}
+
+#homepage-logo {
+    height: 3rem;
 }
 
 main {
