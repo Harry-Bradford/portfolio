@@ -23,11 +23,14 @@ body {
 nav {
     font-family: var(--ff);
     font-optical-sizing: auto;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: 750;
+    letter-spacing: 0.03em;
     font-style: normal;
     background-color: var(--colorSecondary);
-    /* border-bottom: 1px solid var(--colorPrimary) */
+}
+
+#navbar {
 }
 
 nav ul {
@@ -77,43 +80,62 @@ nav li {
     display: flex;
 }
 
-#homepage-logo {
+#small-logo {
+    height: 3rem;
+    display: none;
+}
+
+#big-logo {
     height: 3rem;
 }
 
 #open-menu-button {
-    display: block;
+    display: none;
     background: none;
     border: none;
-    
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#close-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0em;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 900px) {
-    nav {
+
+    #open-menu-button, #close-menu-button {
+        display: block;
+    }
+
+    #navbar {
         position: fixed;
         top: 0;
         right: -100%;
         height: 100vh;
         width: 100%;
         transition: right 500ms ease-out;
+        display: flex;
+        align-items: center;
     }
 
-    nav.show {
+    #navbar.show {
         right: 0;
     }
 
-    nav ul {
+    #navbar ul {
         width: 100%;
         flex-direction: column;
     }
 
-    nav a {
+    #navbar a {
         width: 100%;
     }
 
-    #homepage-logo {
-        display: none;
-    }
 }
 
 main {
