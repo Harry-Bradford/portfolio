@@ -65,6 +65,10 @@ nav a:hover {
     color: var(--redAccent);
 }
 
+nav a.active-link {
+    color: var(--redAccent);
+}
+
 nav .home-li {
     margin-right: auto;
 }
@@ -73,18 +77,31 @@ nav li {
     display: flex;
 }
 
-nav a.active-link {
-    color: var(--redAccent);
+#homepage-logo {
+    height: 3rem;
 }
 
-@media screen and (max-width: 700px) {
+#open-menu-button {
+    display: block;
+    background: none;
+    border: none;
+    
+}
+
+@media screen and (max-width: 900px) {
     nav {
         position: fixed;
         top: 0;
-        right: 0;
+        right: -100%;
         height: 100vh;
-        width: min(15em, 100%);
+        width: 100%;
+        transition: right 500ms ease-out;
     }
+
+    nav.show {
+        right: 0;
+    }
+
     nav ul {
         width: 100%;
         flex-direction: column;
@@ -93,10 +110,10 @@ nav a.active-link {
     nav a {
         width: 100%;
     }
-}
 
-#homepage-logo {
-    height: 3rem;
+    #homepage-logo {
+        display: none;
+    }
 }
 
 main {
