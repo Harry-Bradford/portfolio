@@ -3,9 +3,9 @@
 <html lang="en">
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="styles.css" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-      <link href="styles.css" rel="stylesheet">
       <script defer src="functions.js"></script>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <header>
+        <div id="nav-area">
           <div class="container-fluid small-nav">
             <a href="index.html"><img src="images/pixel-art-logo.png" alt="logo" id="small-logo"></a>
             <button id="open-menu-button" onClick="openMenu()" aria-label="open menu" aria-expanded="false" aria-controls="navbar">
@@ -28,41 +28,44 @@
               <ul class="nav-list">
                 <li><a href="index.html" id="big-logo"><img src="images/pixel-art-logo.png" alt="logo" id="big-logo"></a></li>
                 <li><a class="active-link" aria-current="page" href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="experience.html">EXPERIENCE</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#experience">EXPERIENCE</a></li>
+                <li><a href="#connect">CONTACT</a></li>
               </ul>
-              <div class="container-fluid logo-tray">
-                <div class="row connect-row">
-                  <div class="connect-col">
-                    <a>
-                      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
-                        <g fill="#e9e8e5" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M26.37,26l-8.795,-12.822l0.015,0.012l7.93,-9.19h-2.65l-6.46,7.48l-5.13,-7.48h-6.95l8.211,11.971l-0.001,-0.001l-8.66,10.03h2.65l7.182,-8.322l5.708,8.322zM10.23,6l12.34,18h-2.1l-12.35,-18z"></path></g></g>
-                        </svg>
-                    </a>
-                  </div>
-                  <div class="connect-col">
-                    <a>
-                      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256"><g fill="#e9e8e5" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M10.9,2.1c-4.6,0.5 -8.3,4.2 -8.8,8.7c-0.5,4.7 2.2,8.9 6.3,10.5c0.3,0.1 0.6,-0.1 0.6,-0.5v-1.6c0,0 -0.4,0.1 -0.9,0.1c-1.4,0 -2,-1.2 -2.1,-1.9c-0.1,-0.4 -0.3,-0.7 -0.6,-1c-0.3,-0.1 -0.4,-0.1 -0.4,-0.2c0,-0.2 0.3,-0.2 0.4,-0.2c0.6,0 1.1,0.7 1.3,1c0.5,0.8 1.1,1 1.4,1c0.4,0 0.7,-0.1 0.9,-0.2c0.1,-0.7 0.4,-1.4 1,-1.8c-2.3,-0.5 -4,-1.8 -4,-4c0,-1.1 0.5,-2.2 1.2,-3c-0.1,-0.2 -0.2,-0.7 -0.2,-1.4c0,-0.4 0,-1 0.3,-1.6c0,0 1.4,0 2.8,1.3c0.5,-0.2 1.2,-0.3 1.9,-0.3c0.7,0 1.4,0.1 2,0.3c1.3,-1.3 2.8,-1.3 2.8,-1.3c0.2,0.6 0.2,1.2 0.2,1.6c0,0.8 -0.1,1.2 -0.2,1.4c0.7,0.8 1.2,1.8 1.2,3c0,2.2 -1.7,3.5 -4,4c0.6,0.5 1,1.4 1,2.3v2.6c0,0.3 0.3,0.6 0.7,0.5c3.7,-1.5 6.3,-5.1 6.3,-9.3c0,-6 -5.1,-10.7 -11.1,-10z"></path></g></g></svg>
-                    </a>
-                  </div>
-                </div>
+              <div class="logo-row">
+                <a href="https://github.com/Harry-Bradford">
+                  <svg id="github" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/harry-r-bradford/">
+                  <svg id="linkedin" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                </a>
+                <a href="https://harry-has-games.itch.io/">
+                  <svg id="itch" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 512 512"><path d="M71.9 34.8C50.2 47.7 7.4 96.8 7 109.7v21.3c0 27.1 25.3 50.8 48.3 50.8 27.6 0 50.5-22.9 50.5-50 0 27.1 22.2 50 49.8 50s49-22.9 49-50c0 27.1 23.6 50 51.2 50h.5c27.6 0 51.2-22.9 51.2-50 0 27.1 21.5 50 49 50s49.8-22.9 49.8-50c0 27.1 23 50 50.5 50 23 0 48.3-23.8 48.3-50.8v-21.3c-.4-12.9-43.2-62.1-64.9-75C372.6 32.4 325.8 32 256 32S91.1 33.1 71.9 34.8zm132.3 134.4c-22 38.4-77.9 38.7-99.9 .3-13.2 23.1-43.2 32.1-56 27.7-3.9 40.2-13.7 237.1 17.7 269.2 80 18.7 302.1 18.1 379.8 0 31.7-32.3 21.3-232 17.8-269.2-12.9 4.4-42.9-4.6-56-27.7-22 38.5-77.9 38.1-99.9-.2-7.1 12.5-23.1 28.9-51.8 28.9a57.5 57.5 0 0 1 -51.8-28.9zm-41.6 53.8c16.5 0 31.1 0 49.2 19.8a436.9 436.9 0 0 1 88.2 0C318.2 223 332.9 223 349.3 223c52.3 0 65.2 77.5 83.9 144.5 17.3 62.2-5.5 63.7-34 63.7-42.2-1.6-65.5-32.2-65.5-62.8-39.3 6.4-101.9 8.8-155.6 0 0 30.6-23.3 61.2-65.5 62.8-28.4-.1-51.2-1.6-33.9-63.7 18.7-67 31.6-144.5 83.9-144.5zM256 270.8s-44.4 40.8-52.4 55.2l29-1.2v25.3c0 1.6 21.3 .2 23.3 .2 11.7 .5 23.3 1 23.3-.2v-25.3l29 1.2c-8-14.5-52.4-55.2-52.4-55.2z"/></svg>
+                </a>
+                <a href="hrb349@gmail.com">
+                  <svg id="mail" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                </a>
+                <a href="https://x.com/hrb349">
+                  <svg id="twitter" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                </a>
               </div>
             </nav>
-          </header>
+          </div>
 
           <main>
+
             <section class="container-fluid carousel-container">
               <div class="slider-wrapper">
                 <div class="slider">
                   <img id="slide-1" src="images/demo2-gif.gif" alt="slide 1">
                   <img id="slide-2" src="images/demo3-gif.gif" alt="slide 2">
                   <img id="slide-3" src="images/placeholder-carousel-3.png" alt="slide 3">
-                  <img id="slide-4" src="images/demo-gif.gif" alt="slide 4">    
+                  <img id="slide-4" src="images/demo-gif.gif" alt="slide 4">
                 </div>
-                <div class="container slide-text">
-                  <h1>Developer</h1>
-                  <p>I love programming! woo hoo... and let's put some other stuff here to fill it up and look realistic</p>
+                <div class="slider-text">
+                  <h1>Harry Bradford</h1>
+                  <h2>/* Game Engineer */</h2>
+                  <p>Aspiring game developer with particular interests in software engineering and technical art</p>
                 </div>
                 <div class="slider-nav">
                   <a href="#slide-1"></a>
@@ -72,6 +75,187 @@
                 </div>
               </div>
             </section>
-            
+
+            <div class="container-fluid scroll-text hidden">
+              SCROLL
+            </div>
+            <div class="container scroll-icon">
+              <div class="box scroll-arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <section class="container-fluid hidden" id="projects">
+              <h1>PROJECTS</h1>
+              <div class="container-fluid project-area hidden" id="project-1">
+                <img src="images/demo3-gif.gif" alt="project-img">
+                <div class="project-text text-right">
+                  <h2>Project 1</h2>
+                  blah blah blah some text about some project hjdslfjklasjknfjs dsjklfjakslfj jskdjfkl hjsdanjk dsjklfjsdj
+                </div>
+              </div>
+              <div class="container-fluid project-area hidden" id="project-2">
+                <div class=" project-text text-left">
+                  <h2>Project 2</h2>
+                  again... blah blahdy blah some project text blah blah blah
+                </div>
+                <img src="images/demo-gif.gif" alt="project-2-img">
+              </div>
+              <div class="container-fluid project-area hidden" id="project-3">
+                <img src="images/demo2-gif.gif" alt="project-2-img">
+                <div class="project-text text-right">
+                  <h2>Project 3</h2>
+                  again... blah blahdy blah some project text blah blah blah
+                </div>
+              </div>
+              <div class="container-fluid project-area hidden" id="project-2">
+                <div class="project-text text-left">
+                  <h2>Galaga</h2>
+                  <p>
+                    Using <em>Raylib</em>, an open source library used for game programming (inspired by the XNA framework), I was able to remake the classic 80s arcade game.
+                  </p>
+                </div>
+                <img src="images/placeholder-carousel-1.png" alt="project-2-img">
+              </div>
+              <div class="container-fluid project-area hidden" id="project-3">
+                <img src="images/placeholder-carousel-3.png" alt="project-2-img">
+                <div class="project-text text-right">
+                  <h2>CS50: Harvard Computer Science Course</h2>
+                  <p>
+                    I earned a certificate from Harvard's online school for completing their CS50 module, taught at their university. The course teaches fundamentals of computer science including topics such as <strong>abstraction</strong>, <strong>algorithms</strong>, <strong>data structures</strong>, <strong>encapsulation</strong>, <strong>resource management</strong>, <strong>security</strong>, <strong>software engineering</strong>, and <strong>web development</strong>. <br>
+                    Languages covered: <strong>C</strong>, <strong>Python</strong>, <strong>SQL</strong>, <strong>JavaScript</strong>, <strong>CSS</strong> and <strong>HTML</strong><br>
+                  </p>
+                  <a href="https://github.com/code50/136973678">Github Page</a>
+                </div>
+              </div>
+            </section>
+
+            <section class="container-fluid" id="experience">
+              <h1>EXPERIENCE</h1>
+              <div class="container-fluid project-area hidden" id="project-1">
+                <img src="images/TSW.jpg" alt="TSW-img">
+                <div class="project-text text-right">
+                  <h2>Dovetail Games</h2>
+                  <h3>QA Tester</h3>
+                  <p>| <em>Train Sim World 4</em> | <em>Train Sim World 5</em> | <em>Train Simulator Classic</em> | <br><em>City Transport Simulator</em> | <em>Catan - Console Edition</em> | <br> + another four unannounced projects soon to be released.</p>
+                  <p>Another </p>
+                </div>
+              </div>
+              <div class="container-fluid project-area hidden">
+                <div class="project-text text-left">
+                  <h2>thinkTribe</h2>
+                  <h3>Web Engineer / Load Test Project Manager</h3>
+                  <p>| <em>Project Management</em> | <em>Automated QA</em> | <em>Web + Mobile Testing</em> | <em>Python</em> | <em>Javascript</em> | <em>APIs</em> | <em>Git</em> | <em>Jenkins</em> | <em>Selenium</em> | <em>SQL</em> | </p>
+                  <ul>
+                    <li>Monitored and tested websites/apps for over 50 leading international brands, ensuring they ran smoothly.</li>
+                    <li>Used Python and Javascript to write code and maintain our automated testing engine, creating scripts for new “User Journeys”, simulations of a real user navigating through a site/app.</li>
+                    <li>Led the team in testing and implementation of new internal tools and products.</li>
+                    <li>Source control through Git, CVS, and deployed new releases using Jenkins.</li>
+                    <li>Developed new frontend features with SQL and Graphana.</li>
+                    <li>Replicated, investigated, and explained any issues flagged from automated testing to our clients.</li>
+                    <li>Managed load test projects from start to finish, writing highly detailed reports and analysis of website capabilities.</li>
+                    <li>Created and upkept substantial amounts of documentation using Confluence.</li>
+                  </ul>
+                </div>
+                <img src="images/think_tribe_rgb.avif" alt="thinktribe-logo" id="thinktribe-logo">
+              </div>
+              <div class="container-fluid project-area hidden">
+                <img src="images/graduation.jpg" alt="thinktribe-logo" id="university-img">
+                <div class="project-text text-right">
+                  <h2>University of Sussex</h2>
+                  <h3>Electrical and Electronics Engineering with Robotics</h3>
+                  <p>
+                    | <em>Advanced Mathematics</em> | <em>Programming for Engineers</em> | <em>Control Engineering</em> | <em>Robotic Mechanics and Design</em> | <em>Thermodynamics</em> | <em>Embedded Systems</em> | 
+                    <em>Microprocessor Design</em> | <em>Electronic Circuit/System Prototyping and Design</em> | <em>Electromechanics</em> | <em>Autonomous Vehicles</em> | <em>Business and Project Management</em> | <em>Professional and Managerial Skills</em> |
+                  </p>
+                  <p>
+                    Initially gained a deep understanding of engineering, applying a strong knowledge of maths and physics to solve practical lab experiments and advanced theoretical problems. I was then able to apply these skills in addition to 
+                    computer programming to design and prototype circuits, microprocessors, and many other examples of electronic or robotic systems.
+                  </p>
+                  <p>
+                    Achieved a mark of 91% in my final year dissertation - <b>using machine learning to improve 5G design</b>.
+                  </p>
+                  <p>
+                    Competed against other Universities in the UK and Europe in team-based projects such as <i>"Sussex Powerstorm"</i> and the <i>"Global Design Challenge"</i>, tasked with designing and building a wind turbine-powered vehicle, and proposing 
+                    a solution to sustainable development challenges respectively.
+                  </p>
+                  <p>
+                    Some of my projects:
+                  </p>
+                </div>
+              </div>
+              <div class="uni-area">
+                <div class="container uni-projects">
+                  <div>
+                    <a href="University/Dissertation.pdf"><img src="Images/neural-network.jpg"></a>
+                    Modulation Classification Using a Deep Neural Network to Optimize Future Radio Communications (using machine learning to improve 5G design)
+                  </div>
+                  <div>
+                    <a href="University/autonomous-vehicles-final-project.pdf"><img src="Images/QBot2e.jpg"></a>
+                    QBot-2e - Inverse Kinematics, Computer Vision, Mapping & Localisation, & Path Planning
+                  </div>
+                  <div>
+                    <a href="University/Robot_Design_Report.pdf"><img src="Images/equations.png"></a>
+                    Design of a 2dof Parallel Robot (5-Bar Linkage)
+                  </div>
+                  <div>
+                    <a href="University/Smart-Interactive-Systems-report.pdf"><img src="Images/Circuit-screenshot.jpg"></a>
+                    Developing a Smart Blind System
+                  </div>
+                  <div>
+                    <a href="University/Final Report.pdf"><img src="Images/control-engineering-graph.jpg"></a>
+                    Control Engineering - Testing P, PI and PID Controller Performance
+                  </div>
+                  <div>
+                    <a href="University/EPS_Report.pdf"><img src="Images/Power-Systems.jpg"></a>
+                    Renewable Energy – Primary Source and Conversion Technology
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="container-fluid" id="connect">
+              <h1>Let's Connect!</h1>
+              <div class="logo-row">
+                <a href="https://github.com/Harry-Bradford">
+                  <svg id="github" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/harry-r-bradford/">
+                  <svg id="linkedin" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                </a>
+                <a href="https://harry-has-games.itch.io/">
+                  <svg id="itch" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 512 512"><path d="M71.9 34.8C50.2 47.7 7.4 96.8 7 109.7v21.3c0 27.1 25.3 50.8 48.3 50.8 27.6 0 50.5-22.9 50.5-50 0 27.1 22.2 50 49.8 50s49-22.9 49-50c0 27.1 23.6 50 51.2 50h.5c27.6 0 51.2-22.9 51.2-50 0 27.1 21.5 50 49 50s49.8-22.9 49.8-50c0 27.1 23 50 50.5 50 23 0 48.3-23.8 48.3-50.8v-21.3c-.4-12.9-43.2-62.1-64.9-75C372.6 32.4 325.8 32 256 32S91.1 33.1 71.9 34.8zm132.3 134.4c-22 38.4-77.9 38.7-99.9 .3-13.2 23.1-43.2 32.1-56 27.7-3.9 40.2-13.7 237.1 17.7 269.2 80 18.7 302.1 18.1 379.8 0 31.7-32.3 21.3-232 17.8-269.2-12.9 4.4-42.9-4.6-56-27.7-22 38.5-77.9 38.1-99.9-.2-7.1 12.5-23.1 28.9-51.8 28.9a57.5 57.5 0 0 1 -51.8-28.9zm-41.6 53.8c16.5 0 31.1 0 49.2 19.8a436.9 436.9 0 0 1 88.2 0C318.2 223 332.9 223 349.3 223c52.3 0 65.2 77.5 83.9 144.5 17.3 62.2-5.5 63.7-34 63.7-42.2-1.6-65.5-32.2-65.5-62.8-39.3 6.4-101.9 8.8-155.6 0 0 30.6-23.3 61.2-65.5 62.8-28.4-.1-51.2-1.6-33.9-63.7 18.7-67 31.6-144.5 83.9-144.5zM256 270.8s-44.4 40.8-52.4 55.2l29-1.2v25.3c0 1.6 21.3 .2 23.3 .2 11.7 .5 23.3 1 23.3-.2v-25.3l29 1.2c-8-14.5-52.4-55.2-52.4-55.2z"/></svg>
+                </a>
+                <a href="hrb349@gmail.com">
+                  <svg id="mail" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                </a>
+                <a href="https://x.com/hrb349">
+                  <svg id="twitter" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                </a>
+              </div>
+            </section>
+
+            <div class="container- dialogue">
+              <div class="options-area">
+                <img id="options-background" src="Images/options-box.png">
+                <div id="option-buttons">
+                  <button class="btn">Option 1</button>
+                  <button class="btn">Option 2</button>
+                  <button class="btn">Option 3</button>
+                  <button class="btn">Option 4</button>
+                </div>
+              </div>
+              <div class="dialogue-area">
+                <img id="dialogue-background" src="Images/dialogue-box-smiling.png">
+                <div class="container" id="dialogue-text">
+                  Hi there! lots of workds al-ts of worksds lots of words lots of words mmmmaaa aaaaanu many words wow look at all these words!
+                </div>
+              </div>
+            </div>
+
+              </div>
+            </div>
           </main>
     </body>
