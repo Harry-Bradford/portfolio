@@ -476,7 +476,7 @@ em {
 /* pixel art portrait dialogue */
 
 .dialogue {
-    display: none;
+    display: flex;
     justify-content: space-between;
     position: fixed;
     bottom: 1rem;
@@ -530,8 +530,11 @@ em {
     display: flex;
     position: absolute;
     flex-direction: column;
-    left: 2%;
+    left: 3%;
     top: 25%;
+}
+#option-buttons button {
+    text-align: start;
 }
 
 #option-buttons button {
@@ -606,7 +609,6 @@ em {
         flex-direction: column;
         max-width: 100rem;
         margin: 0 auto;
-        height: 50vh;
     }
 
     .project-area img {
@@ -618,6 +620,7 @@ em {
         width: 80%;
         bottom: 0%;
         text-align: center;
+        align-items: center;
     }
 
     .text-right {
@@ -629,5 +632,14 @@ em {
         align-items: start;
         text-align: center;
     }
+
+    #experience  h1 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* .project-text li::marker {
+        display: none;
+    } */
 
 }

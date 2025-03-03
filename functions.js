@@ -98,25 +98,17 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: 'Hi there! Blahdy blahdy blah i am typing lots and lots of words just to show an example and i am still typing i cant stop i cant stop ah god make it stop, okay just joking but i still need to type just to check it looks good.',
+        text: 'Hi there!',
         options: [
             {
-                text: 'Hello!',
+                text: 'Hello',
                 nextText: 2
             },
             {
-                text: 'Go away.',
-                nextText: 2
+                text: 'Go away',
+                setState: { disappear: true },
+                nextText: 3
             },
-            {
-                text: 'hi',
-                setState: { blueGoo: true },
-                nextText: 2
-            },
-            {
-                text: 'Go away.',
-                nextText: 2
-            }
         ]
     },
     {
@@ -140,7 +132,36 @@ const textNodes = [
                 nextText: 3
             }
         ]
-    }
+    },
+    {
+        id: 3,
+        text: 'Okay, sure... Yeah... no hard feelings...',
+    },
+    {
+        id: 4,
+        text: 'Wow... tough question! I would have to say Outer wilds is my favourite',
+        options: [
+            {
+                text: 'blahdy blahdy blah',
+                requiredState: (CurrentState) => CurrentState.blueGoo,
+                setState: {blueGoo: false, sword: true},
+                nextText: 3
+            },
+            {
+                text: 'blahdy blahdy blah pt.2',
+                requiredState: (CurrentState) => CurrentState.blueGoo,
+                setState: {blueGoo: false, shield: true},
+                nextText: 3
+            },
+            {
+                text: 'blahdy blahdy',
+                nextText: 3
+            }
+        ]
+    },
 ]
 
 startGame()
+
+
+// I used to be what some call a "casual gamer" so FIFA and Call of Duty were my favourites when I was younger. Then Skyrim followed by Fallout 4
