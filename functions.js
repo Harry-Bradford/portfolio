@@ -101,27 +101,193 @@ const textNodes = [
         text: 'Hi there, welcome to my portfolio site!',
         options: [
             {
-                text: 'Hello!',
+                text: 'Hi!',
                 nextText: 2
             },
             {
-                text: 'Go away...',
-                setState: { disappear: true },
-                nextText: 3
+                text: 'Erm... Hello?',
+                nextText: ////////////
             },
         ]
     },
     {
         id: 2,
-        text: 'Go ahead and take a look around, I\'ll be here if you have any questions.',
+        text: 'Hope you don\'t mind me asking - are you looking to recruit someone (me?), or just having a look?',
         options: [
             {
-                text: 'Tell me about yourself',
+                text: 'Just browsing',
+                setState: {browsing: false, recruiter: true},
+                nextText: 3
+            },
+            {
+                text: 'I need someone!',
+                setState: {browsing: true, recruiter: false},
+                nextText: 5
+            },
+            {
+                text: 'I\'d rather not say',
+                setState: {secretive: true},
+                nextText: 3
+            }
+        ]
+    },
+    {
+        id: 3,
+        text: 'Fair enough! Well feel free to browse some more, or we can try and see how engaging our conversations could be with me being an NPC!',
+        options: [
+            {
+                text: 'Like I said, I am just browsing',
+                requiredState: (CurrentState) => CurrentState.browsing,
+                setState: {noTalk: true},
                 nextText: 4
             },
             {
-                text: 'blahdy blahdy blah pt.2',
+                text: 'Thanks but no thanks',
+                requiredState: (CurrentState) => CurrentState.secretive,
+                setState: {noTalk: true},
+                nextText: 4
+            },
+            {
+                text: 'Sure, I guess',
                 nextText: 5
+            },
+        ]
+    },
+    {
+        id: 4,
+        text: 'Okay that\'s fine! Well I\'m still here if you want to ask me anything',
+        options: [
+            {
+                text: 'Okay I am actually a recruiter',
+                requiredState: (CurrentState) => CurrentState.secretive,
+                setState: {secretive: false, recruiter: true},
+                nextText: ////////
+            },
+            {
+                text: 'I guess we could talk',
+                nextText: 5
+            },
+            {
+                text: 'Could you tell me about yourself?',
+                nextText: ////////
+            },
+            {
+                text: 'I still don\'t want to talk',
+                requiredState: (CurrentState) => CurrentState.noTalk,
+                setState: {noTalk: false},
+                nextText: 4
+            },
+        ]
+    },
+    {
+        id: 5,
+        text: 'That\'s the spirit! So... How\'s the weather wherever you are?',
+        options: [
+            {
+                text: 'Pretty good, suns out',
+                nextText: 6
+            },
+            {
+                text: 'Horrible outside',
+                nextText: 5
+            },
+            {
+                text: 'Really? The weather?',
+                nextText: 3
+            }
+        ]
+    },
+    {
+        id: 6,
+        text: 'Nice... nice... So what\'s your favourite game?',
+        options: [
+            {
+                text: 'Skyrim',
+                nextText: 7
+            },
+            {
+                text: 'Outer Wilds',
+                nextText: 7
+            },
+            {
+                text: 'Hollow Knight',
+                nextText: 7
+            },
+            {
+                text: 'Hades',
+                nextText: 7
+            },
+        ]
+    },
+    {
+        id: 7,
+        text: 'Amazing! That\'s my favourite game too! How weird is that we both have the same favourite game...',
+        options: [
+            {
+                text: 'Wow, really weird!',
+                nextText: 8
+            },
+            {
+                text: 'Well you didn\'t give me much choice',
+                nextText: 9
+            }
+        ]
+    },
+    {
+        id: 8,
+        text: 'What else is the same? Hmmmm favourite music artist?',
+        options: [
+            {
+                text: 'Radiohead',
+                nextText: 10
+            },
+            {
+                text: 'Pink Floyd',
+                nextText: 10
+            },
+            {
+                text: 'Neil Young',
+                nextText: 10
+            },
+            {
+                text: 'Metallica',
+                nextText: 10
+            },
+        ]
+    },
+    {
+        id: 10,
+        text: 'No way! We both have the same favourite game, and favourite music artist, what are the odds?...',
+        options: [
+            {
+                text: 'Radiohead',
+                nextText: 10
+            },
+            {
+                text: 'Pink Floyd',
+                nextText: 10
+            },
+            {
+                text: 'Neil Young',
+                nextText: 10
+            },
+            {
+                text: 'Metallica',
+                nextText: 10
+            },
+        ]
+    },
+    {
+        id: 3,
+        text: 'What\'s the matter? Never seen an NPC style dialogue system in a portfolio website before?',
+        options: [
+            {
+                text: 'Yeah all the time actually',
+                nextText: 5
+            },
+            {
+                text: 'What do you do in your spare time to relax?',
+                nextText: 3
             },
             {
                 text: 'blahdy blahdy',
@@ -130,19 +296,33 @@ const textNodes = [
         ]
     },
     {
-        id: 3,
-        text: 'Okay, sure... Yeah... no hard feelings...',
-    },
-    {
         id: 4,
-        text: 'I\'m a ',
+        text: 'I\'m Harry Bradford, a QA tester at Dovetail Games.',
         options: [
+            {
+                text: 'Tell me a little more about yourself',
+                nextText: 3
+            },
             {
                 text: 'What do you do in your spare time to relax?',
                 nextText: 3
             },
             {
-                text: 'blahdy blahdy blah pt.2',
+                text: 'blahdy blahdy',
+                nextText: 3
+            }
+        ]
+    },
+    {
+        id: 5,
+        text: 'Oh really? That\'s embarrassing... Well could you just ignore that, I swear I came up with this on my own.',
+        options: [
+            {
+                text: 'Tell me a little more about yourself',
+                nextText: 3
+            },
+            {
+                text: 'What do you do in your spare time to relax?',
                 nextText: 3
             },
             {
