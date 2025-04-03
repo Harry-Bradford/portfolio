@@ -350,9 +350,19 @@ em {
     padding-bottom: 5rem;
 }
 
+.project-images {
+    display: flex;
+    flex-direction: column;
+}
+
 .project-area img {
     width: 30%;
     border-radius: 0.5rem;
+}
+
+.project-images img {
+    width: 50%;
+    margin: 1vh 0 1vh 0;
 }
 
 #thinktribe-logo {
@@ -365,6 +375,10 @@ em {
     flex-direction: column;
     justify-content: start;
     padding: 0 1rem 0 1rem;
+}
+
+.unreal-area {
+    width: 100%;
 }
 
 .project-text li::marker {
@@ -426,7 +440,8 @@ em {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem
+    padding: 2rem;
+    margin: 10vh 0 25vh 0;
 }
 
 #connect h1{

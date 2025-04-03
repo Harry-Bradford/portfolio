@@ -98,14 +98,14 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: 'Hi there!',
+        text: 'Hi there, welcome to my portfolio site!',
         options: [
             {
-                text: 'Hello',
+                text: 'Hello!',
                 nextText: 2
             },
             {
-                text: 'Go away',
+                text: 'Go away...',
                 setState: { disappear: true },
                 nextText: 3
             },
@@ -113,19 +113,15 @@ const textNodes = [
     },
     {
         id: 2,
-        text: 'blah blah blah',
+        text: 'Go ahead and take a look around, I\'ll be here if you have any questions.',
         options: [
             {
-                text: 'blahdy blahdy blah',
-                requiredState: (CurrentState) => CurrentState.blueGoo,
-                setState: {blueGoo: false, sword: true},
-                nextText: 3
+                text: 'Tell me about yourself',
+                nextText: 4
             },
             {
                 text: 'blahdy blahdy blah pt.2',
-                requiredState: (CurrentState) => CurrentState.blueGoo,
-                setState: {blueGoo: false, shield: true},
-                nextText: 3
+                nextText: 5
             },
             {
                 text: 'blahdy blahdy',
@@ -139,18 +135,14 @@ const textNodes = [
     },
     {
         id: 4,
-        text: 'Wow... tough question! I would have to say Outer wilds is my favourite',
+        text: 'I\'m a ',
         options: [
             {
-                text: 'blahdy blahdy blah',
-                requiredState: (CurrentState) => CurrentState.blueGoo,
-                setState: {blueGoo: false, sword: true},
+                text: 'What do you do in your spare time to relax?',
                 nextText: 3
             },
             {
                 text: 'blahdy blahdy blah pt.2',
-                requiredState: (CurrentState) => CurrentState.blueGoo,
-                setState: {blueGoo: false, shield: true},
                 nextText: 3
             },
             {
@@ -165,3 +157,13 @@ startGame()
 
 
 // I used to be what some call a "casual gamer" so FIFA and Call of Duty were my favourites when I was younger. Then Skyrim followed by Fallout 4
+
+// what do you look for in a role - Are the employees set up for success? 
+
+// dream - my 15 year old self would say I'm already living the dream in QA, but now I would have to say my dream (like many in this industry) would be to launch my own successful indie game
+
+// requiredState: (CurrentState) => CurrentState.blueGoo,
+
+// setState: {blueGoo: false, sword: true},
+
+// textElement.style.display = hidden;
