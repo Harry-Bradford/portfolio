@@ -200,7 +200,7 @@ main {
     font-optical-sizing: auto;
     font-size: clamp(1.5rem, -1.5rem + 6vw, 2rem);
     font-style: normal;
-    color: var(--blueAccent);
+    color: var(--redAccent);
 }
 
 .slider-text h1 {
@@ -209,7 +209,7 @@ main {
     font-size: clamp(3rem, -1.5rem + 8vw, 4rem);
     font-weight: bold;
     font-style: normal;
-    color: var(--colorPrimary);
+    color: #054a76
 }
 
 .slider-text h2 {
@@ -217,7 +217,7 @@ main {
     font-optical-sizing: auto;
     font-size: clamp(2rem, -1.5rem + 6vw, 3rem);
     font-style: normal;
-    color: var(--redAccent);
+    color: var(--colorPrimary);
 
 }
 
@@ -363,6 +363,10 @@ em {
 .project-images img {
     width: 50%;
     margin: 1vh 0 1vh 0;
+}
+
+#dog {
+    width: 15%;
 }
 
 #thinktribe-logo {
