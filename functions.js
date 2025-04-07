@@ -117,7 +117,7 @@ const textNodes = [
         text: 'Hope you don\'t mind me asking - are you looking to recruit someone (me?), or just having a look?',
         options: [
             {
-                text: 'Just browsing',
+                text: 'Just browsing.',
                 setState: {browsing: true, recruiter: false},
                 nextText: 3
             },
@@ -133,11 +133,11 @@ const textNodes = [
         text: 'Fair enough! Well feel free to browse some more, or we can try and see how engaging our conversations could be with me being an NPC?',
         options: [
             {
-                text: 'Like I said, I am just browsing',
+                text: 'Like I said, I am just browsing.',
                 nextText: 4
             },
             {
-                text: 'Sure, I guess',
+                text: 'Sure, I guess.',
                 nextText: 6
             },
         ]
@@ -147,11 +147,11 @@ const textNodes = [
         text: 'Okay that\'s fine! Well I\'ll be here if you want to ask me anything',
         options: [
             {
-                text: 'Okay I am actually a recruiter',
+                text: 'Okay I am actually a recruiter.',
                 nextText: 19
             },
             {
-                text: 'I guess we could talk',
+                text: 'I guess we could talk.',
                 nextText: 6
             },
             {
@@ -165,7 +165,7 @@ const textNodes = [
         text: 'Good idea!',
         options: [
             {
-                text: 'Thank you',
+                text: 'Thank you.',
                 nextText: 1
             },
         ]
@@ -175,11 +175,11 @@ const textNodes = [
         text: 'That\'s the spirit! So... How\'s the weather wherever you are?',
         options: [
             {
-                text: 'Pretty good, suns out',
+                text: 'Pretty good, suns out.',
                 nextText: 8
             },
             {
-                text: 'Horrible outside',
+                text: 'Horrible outside.',
                 nextText: 7
             },
             {
@@ -193,11 +193,11 @@ const textNodes = [
         text: 'Well I\'m sorry just trying to make conversation! What do YOU want to talk about?',
         options: [
             {
-                text: 'It\'s fine, carry on',
+                text: 'It\'s fine, carry on.',
                 nextText: 8
             },
             {
-                text: 'Nothing',
+                text: 'Nothing.',
                 nextText: 4
             },
             {
@@ -225,19 +225,19 @@ const textNodes = [
         text: 'Nice, nice... So... what\'s your favourite game?',
         options: [
             {
-                text: 'Skyrim',
+                text: 'Skyrim.',
                 nextText: 9
             },
             {
-                text: 'Outer Wilds',
+                text: 'Outer Wilds.',
                 nextText: 9
             },
             {
-                text: 'Hollow Knight',
+                text: 'Hollow Knight.',
                 nextText: 9
             },
             {
-                text: 'Stardew Valley',
+                text: 'Stardew Valley.',
                 nextText: 9
             },
         ]
@@ -251,29 +251,29 @@ const textNodes = [
                 nextText: 10
             },
             {
-                text: 'Well you didn\'t give me much choice',
-                nextText: 14
+                text: 'Well you didn\'t give me much choice.',
+                nextText: 10
             }
         ]
     },
     {
         id: 10,
-        text: 'What else is the same? Hmmmm favourite music artist?',
+        text: 'Anyway... What else is the same? Hmmmm favourite music artist?',
         options: [
             {
-                text: 'Radiohead',
+                text: 'Radiohead.',
                 nextText: 11
             },
             {
-                text: 'Pink Floyd',
+                text: 'Pink Floyd.',
                 nextText: 11
             },
             {
-                text: 'Neil Young',
+                text: 'Neil Young.',
                 nextText: 11
             },
             {
-                text: 'Metallica',
+                text: 'Portishead.',
                 nextText: 11
             },
         ]
@@ -287,7 +287,7 @@ const textNodes = [
                 nextText: 12
             },
             {
-                text: 'Okay I\'m stopping this now',
+                text: 'Okay can we stop now?',
                 nextText: 14
             },
         ]
@@ -297,19 +297,19 @@ const textNodes = [
         text: 'Oooh I know! Favourite movie??',
         options: [
             {
-                text: 'Spirited Away',
+                text: 'Spirited Away.',
                 nextText: 13
             },
             {
-                text: 'Interstellar',
+                text: 'Interstellar.',
                 nextText: 13
             },
             {
-                text: 'Kill Bill',
+                text: 'Kill Bill.',
                 nextText: 13
             },
             {
-                text: 'Kung Fu Panda',
+                text: 'Kung Fu Panda.',
                 nextText: 13
             },
         ]
@@ -319,21 +319,21 @@ const textNodes = [
         text: 'NO WAY! Are you cheating?',
         options: [
             {
-                text: 'Please stop',
+                text: 'Please stop.',
                 nextText: 14
             },
             {
-                text: 'Okay that\'s enough now',
+                text: 'Okay that\'s enough now.',
                 nextText: 14
             },
         ]
     },
     {
         id: 14,
-        text: 'Okay you got me, I\'ll stop now... So what else can we talk about?',
+        text: 'Okay okay you got me, I\'ll stop now! So what else can we talk about?',
         options: [
             {
-                text: 'I am not speaking to you',
+                text: 'I am not speaking to you.',
                 nextText: 4
             },
             {
@@ -347,15 +347,15 @@ const textNodes = [
         text: 'What\'s the matter? Never seen an NPC style dialogue system in a portfolio website before?',
         options: [
             {
-                text: 'Yeah all the time actually',
+                text: 'Yeah all the time actually.',
                 nextText: 16
             },
             {
-                text: 'I guess not',
+                text: 'I guess not.',
                 nextText: 18
             },
             {
-                text: 'This is pretty weird',
+                text: 'This is pretty weird.',
                 nextText: 17
             }
         ]
@@ -365,7 +365,7 @@ const textNodes = [
         text: 'Oh really? That\'s embarrassing... Well could you just ignore that, I SWEAR I came up with this on my own.',
         options: [
             {
-                text: 'Fine I will ignore it',
+                text: 'Fine I will ignore it.',
                 nextText: 18
             },
             {
@@ -379,15 +379,15 @@ const textNodes = [
         text: 'You don\'t like it? I thought it would add a personal touch, you can get to know me! Or we can have a conversation about anything?',
         options: [
             {
-                text: 'Okay fine, tell me about yourself then',
+                text: 'Okay fine, tell me about yourself then.',
                 nextText: 20
             },
             {
-                text: 'I guess we can have a conversation',
+                text: 'I guess we can have a conversation.',
                 nextText: 6
             },
             {
-                text: 'No I don\'t, leave me alone',
+                text: 'No I don\'t, leave me alone.',
                 nextText: 4
             }
         ]
@@ -401,7 +401,7 @@ const textNodes = [
                 nextText: 20
             },
             {
-                text: 'No I don\'t, leave me alone',
+                text: 'No I don\'t, leave me alone.',
                 nextText: 4
             }
         ]
@@ -411,11 +411,13 @@ const textNodes = [
         text: 'Great! Feel free to ask me some questions and hopefully you like what you see and hear.',
         options: [
             {
-                text: 'Tell me about yourself',
+                text: 'Tell me about yourself.',
+                setState: {engToGame: true},
                 nextText: 20
             },
             {
                 text: 'So you\'ve gone from engineering to gaming?',
+                requiredState: (CurrentState) => CurrentState.engToGame,
                 nextText: 25
             },
             {
@@ -445,7 +447,7 @@ const textNodes = [
                 nextText: 24
             },
             {
-                text: 'I would like to ask you something else',
+                text: 'I would like to ask you something else.',
                 nextText: 19
             },
         ]
@@ -463,7 +465,7 @@ const textNodes = [
                 nextText: 24
             },
             {
-                text: 'I would like to ask you something else',
+                text: 'I would like to ask you something else.',
                 nextText: 19
             },
         ]
@@ -491,7 +493,7 @@ const textNodes = [
                 nextText: 24
             },
             {
-                text: 'I would like to ask you something else',
+                text: 'I would like to ask you something else.',
                 nextText: 19
             },
         ]
@@ -508,10 +510,11 @@ const textNodes = [
     },
     {
         id: 25,
-        text: 'I enjoyed Engineering, especially the maths and lab work. But, after using C to program our robots, I fell in love with programming. I landed a job at thinkTribe the week before starting a masters in Computer Science. The games industry always felt like one of those "dream jobs" beyond me, but I took the leap and a big paycut to do something I was really passionate about.',
+        text: 'I enjoyed Engineering, especially the maths and lab work, but after using C to program a few robots, I fell in love with coding. I landed a job at thinkTribe the week before starting a masters in Computer Science. The games industry always felt like one of those "dream jobs" beyond me, but eventually I took the leap and a big paycut to do something I was really passionate about.',
         options: [
             {
                 text: 'What is a game that has inspired you?',
+                setState: {stardew: true, wilds: true, witness: true, disco: true},
                 nextText: 26
             },
         ]
@@ -522,18 +525,26 @@ const textNodes = [
         options: [
             {
                 text: 'Stardew Valley?',
+                requiredState: (CurrentState) => CurrentState.stardew,
+                setState: {stardew: false},
                 nextText: 27
             },
             {
                 text: 'Outer Wilds?',
+                requiredState: (CurrentState) => CurrentState.wilds,
+                setState: {wilds: false},
                 nextText: 28
             },
             {
                 text: 'The Witness?',
+                requiredState: (CurrentState) => CurrentState.witness,
+                setState: {witness: false},
                 nextText: 29
             },
             {
                 text: 'Disco Elysum?',
+                requiredState: (CurrentState) => CurrentState.disco,
+                setState: {disco: false},
                 nextText: 30
             },
         ]
@@ -544,55 +555,81 @@ const textNodes = [
         options: [
             {
                 text: 'Outer Wilds?',
+                requiredState: (CurrentState) => CurrentState.wilds,
+                setState: {wilds: false},
                 nextText: 28
             },
             {
                 text: 'The Witness?',
+                requiredState: (CurrentState) => CurrentState.witness,
+                setState: {witness: false},
                 nextText: 29
             },
             {
                 text: 'Disco Elysum?',
+                requiredState: (CurrentState) => CurrentState.disco,
+                setState: {disco: false},
                 nextText: 30
             },
             {
-                text: 'I would like to ask you something else',
+                text: 'I would like to ask you something else.',
                 nextText: 20
             },
         ]
     },
     {
         id: 28,
-        text: 'I think Outer Wilds is the single greatest gameplay experience I have ever had, becoming truely lost in the game, actually feeling like an astronaut/archaeologist! The way you discover and solve problems throughout the game by sheer exploration has really made me think about the possibilities and impact that games can have.',
+        text: 'I think Outer Wilds is the single greatest gameplay experience I have ever had, becoming truely lost in the game, actually feeling like an astronaut and archaeologist! The way you discover and solve problems throughout the game by sheer exploration has really made me think about the possibilities and impact that games can have.',
         options: [
             {
                 text: 'Stardew Valley?',
-                nextText: 28
+                requiredState: (CurrentState) => CurrentState.stardew,
+                setState: {stardew: false},
+                nextText: 27
             },
             {
                 text: 'The Witness?',
+                requiredState: (CurrentState) => CurrentState.witness,
+                setState: {witness: false},
                 nextText: 29
             },
             {
                 text: 'Disco Elysum?',
+                requiredState: (CurrentState) => CurrentState.disco,
+                setState: {disco: false},
                 nextText: 30
+            },
+            {
+                text: 'I would like to ask you something else.',
+                nextText: 20
             },
         ]
     },
     {
         id: 29,
-        text: 'This is one of the most unique games I have ever played, it\'s absolutely beautiful and the puzzles are actually part of the environment, amazing! But my favourite part about the game is how it teaches mechanics to the player, without hardly any tutorials. Getting the puzzles correct makes you feel like you have 250 IQ',
+        text: 'This is one of the most unique games I have ever played, it\'s absolutely beautiful and the puzzles are actually part of the environment, amazing! But my favourite part about the game is how it teaches mechanics to the player, without hardly any tutorials. Getting the puzzles correct makes you feel like you have 250 IQ!',
         options: [
             {
                 text: 'Stardew Valley?',
-                nextText: 28
+                requiredState: (CurrentState) => CurrentState.stardew,
+                setState: {stardew: false},
+                nextText: 27
             },
             {
                 text: 'Outer Wilds?',
-                nextText: 29
+                requiredState: (CurrentState) => CurrentState.wilds,
+                setState: {wilds: false},
+                nextText: 28
             },
             {
                 text: 'Disco Elysum?',
+                requiredState: (CurrentState) => CurrentState.disco,
+                setState: {disco: false},
                 nextText: 30
+            },
+            {
+                text: 'I would like to ask you something else.',
+                nextText: 20
             },
         ]
     },
@@ -602,24 +639,34 @@ const textNodes = [
         options: [
             {
                 text: 'Stardew Valley?',
-                nextText: 28
+                requiredState: (CurrentState) => CurrentState.stardew,
+                setState: {stardew: false},
+                nextText: 27
             },
             {
                 text: 'Outer Wilds?',
-                nextText: 29
+                requiredState: (CurrentState) => CurrentState.wilds,
+                setState: {wilds: false},
+                nextText: 28
             },
             {
                 text: 'The Witness?',
-                nextText: 30
+                requiredState: (CurrentState) => CurrentState.witness,
+                setState: {witness: false},
+                nextText: 29
+            },
+            {
+                text: 'I would like to ask you something else.',
+                nextText: 20
             },
         ]
     },
     {
         id: 31,
-        text: 'Being a passionate gamer, in addition to coming from QA, I feel that I have a very strong ability to put myself in the players mind. That paired with my programming and engineering experience, makes me a decent problem solver who often consistently thinks outside of the box for solutions.',
+        text: 'Being a passionate gamer, in addition to coming from QA, I feel that I have a very strong ability to put myself in the players mind. That, paired with my programming and engineering experience, makes me a decent problem solver who consistently thinks outside of the box for solutions.',
         options: [
             {
-                text: 'I would like to ask you something else',
+                text: 'I would like to ask you something else.',
                 nextText: 19
             },
         ]
@@ -629,7 +676,7 @@ const textNodes = [
         text: 'Are the team members set up for success, where there is there good communication, collaboration, and it is a positive environment? If not, is the team open minded to change the practices? These are crucial factors for us as employees, and the company as a whole, in order to create the best game possible for the players.',
         options: [
             {
-                text: 'I would like to ask you something else',
+                text: 'I would like to ask you something else.',
                 nextText: 19
             },
         ]
@@ -639,7 +686,7 @@ const textNodes = [
         text: 'I would like to be one of the games industry veterans and spend many many years doing what I love! But, my BIGGEST dream would be to release my own indie game that has its own following and community, like the ones I include myself in now.',
         options: [
             {
-                text: 'I would like to ask you something else',
+                text: 'I would like to ask you something else.',
                 nextText: 19
             },
         ]
