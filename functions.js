@@ -376,7 +376,7 @@ const textNodes = [
     },
     {
         id: 17,
-        text: 'You don\'t like it? I thought it would add a personal touch, you can get to know me! Or we can have a conversation about anything?',
+        text: 'You don\'t like it? I thought it would add a personal touch, you can get to know me! Or we can have a conversation about LITERALLY anything?',
         options: [
             {
                 text: 'Okay fine, tell me about yourself then.',
