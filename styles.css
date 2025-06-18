@@ -355,10 +355,13 @@ em {
     flex-direction: column;
 }
 
-.project-images-right {
+.shaders {
     display: flex;
     justify-content: end;
-    flex-direction: column;
+    align-items: end;
+}
+.shader-text {
+    width: 100%;
 }
 
 .project-area img {
