@@ -304,7 +304,7 @@ main {
 
 /* projects and experience sections */
 
-#projects, #experience {
+#projects, #experience, #pcg, #shaders {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -316,13 +316,17 @@ main {
     padding-top: 10rem;
 }
 
+#pcg, #shaders {
+    padding-top: 5rem;
+}
+
 em {
     color: #ce6337;
     font-weight: normal;
     font-style: normal;
 }
 
-#projects h1, #experience h1 {
+#projects h1, #experience h1, #pcg h1, #shaders h1{
     font-size: clamp(2rem, -1.5rem + 8.5vw, 4rem);
     font-weight: bold;
     color: var(--redAccent);
@@ -353,6 +357,52 @@ em {
 .project-images {
     display: flex;
     flex-direction: column;
+}
+
+.pcg-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+}
+
+.pcg-area img{
+    aspect-ratio: 16 / 9;
+    border: solid thin var(--colorSecondary);
+    border-radius: 0.5rem;
+    width: 25vw;
+    margin: 1rem 1rem 1rem 1rem;
+    transition: opacity 400ms ease;
+}
+
+.material {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.materials-area .shader-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.materials-area img {
+    aspect-ratio: 5/4;
+    border-radius: 0.5rem;
+    width: 15vw;
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color:#FFFF00;
+  height: 1px;
 }
 
 .shaders {
