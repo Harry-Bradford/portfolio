@@ -34,6 +34,26 @@ function activeLink() {
     
 }
 
+function scrollHandler() {
+  var element = document.getElementById('dialogue');
+
+  var distanceToTop = window.pageYOffset - 450 + element.getBoundingClientRect().top;
+  var elementHeight = element.offsetHeight;
+	var scrollTop = document.documentElement.scrollTop;
+	
+	var opacity = 1;
+	
+	if (scrollTop > distanceToTop) {
+		opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+	}
+	
+	if (opacity >= 0) {
+		element.style.opacity = opacity;
+	}}
+
+window.addEventListener('scroll', scrollHandler);
+
+
 // script for scrolling animations
 
 // const observer = new IntersectionObserver((entries) => {
