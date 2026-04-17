@@ -152,32 +152,28 @@ nav a.active-link {
     fill: var(--colorPrimary)
 }
 
-main {
-    padding: none;
-    margin-top: 7vh;
-}
-
 /* Hero slider */
 
 .carousel-container {
-    padding: 2rem;
+    position: relative;
+    margin-top: 7vh;
+    padding-top: 1.3vh;
+    width: 100%;
 }
 
 .slider-wrapper {
     position: relative;
-    max-width: 100rem;
     margin: 0 auto;
 }
 
 .slider {
     display: flex;
     /* aspect-ratio: 16 / 9; */
-    height: 70vh;
+    height: 66.5vh;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    border-radius: 0.5rem;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -246,6 +242,11 @@ main {
 
 /* scroll arrow */
 
+.scroll-section {
+    position: relative;
+    top: -20vh;
+}
+
 .scroll-text {
     display: flex;
     justify-content: center;
@@ -306,6 +307,8 @@ main {
 
 #projects, #experience, #pcg, #shaders {
     display: flex;
+    position: relative;
+    top: -14vh;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -314,6 +317,10 @@ main {
     font-size: clamp(0.8rem, -1.5rem + 2.5vw, 1.3rem);
     font-style: normal;
     padding-top: 10rem;
+}
+
+#experience {
+    padding-top: 2.2rem;
 }
 
 #pcg, #shaders {
@@ -504,7 +511,7 @@ hr {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    margin: 10vh 0 25vh 0;
+    margin: 0;
 }
 
 #connect h1{
@@ -552,16 +559,13 @@ hr {
 
 
 /* pixel art portrait dialogue */
-
+  
 .dialogue {
     display: flex;
+    position: relative;
     justify-content: space-between;
-    position: fixed;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    z-index: 999;
-    padding: 0;
+    top: -3rem;
+    padding-top: rem;
     margin: 0;
 }
 
@@ -574,29 +578,27 @@ hr {
 }
 
 #dialogue-background {
-    width: 60vw;
+    width: 40vw;
 }
 
 #options-background {
-    width: 30vw;
+    width: 40vw;
 }
 
 #dialogue-text {
+    font-family: 'Public Pixel', sans-serif;
     display: inline-block;
-    width: 42%;
+    text-align: justify;
+    width: 25%;
     position: absolute;
-    padding: 0;
-    left: 41%;
-    top: 28%;
-    font-family: var(--ff);
+    padding: 3.6% 0 0 1.4%;
     font-optical-sizing: auto;
-    font-size: clamp(1rem, -1.5rem + 3vw, 2rem);
+    font-size: clamp(0.5rem, -0.0159rem + 0.6349vw, 1rem);
     font-style: normal;
     color: var(--colorPrimary);
     /* animation: typing 2s steps(40, end);
     overflow: hidden;
     white-space: nowrap; */
-
 }
 
 /* @keyframes typing {
@@ -608,25 +610,35 @@ hr {
     display: flex;
     position: absolute;
     flex-direction: column;
-    left: 3%;
-    top: 25%;
+    width: 38vw;
+    padding: 3.6% 0 0 1.4%;
 }
 #option-buttons button {
     text-align: start;
 }
 
 #option-buttons button {
-    font-family: var(--ff);
+    font-family: 'Public Pixel', sans-serif;
     font-optical-sizing: auto;
-    font-size: clamp(1rem, -1.5rem + 2.5vw, 2rem);
+    font-size: clamp(0.5rem, -0.0159rem + 0.6349vw, 1rem);
     font-style: normal;
-    outline: none;
+    border-color: var(--colorSecondary);
+    border-style: outset;
+    margin-bottom: 0.1vw;
+    padding: 0.6vw;
     color: var(--colorPrimary);
     transition: color 400ms ease;
 }
 
 #option-buttons button:hover {
     color: var(--redAccent);
+    border-style: inset;
+}
+
+@media screen and (max-width: 1300px) {
+    .dialogue {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1000px) {
