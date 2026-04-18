@@ -20,7 +20,7 @@ ul, ol {
 }
 
 body {
-    background-color: var(--colorPrimary);
+    background-color: var(--colorSecondary);
     min-height: 100vh;
     min-height: 100dvh;
 }
@@ -467,7 +467,6 @@ hr {
 
 .uni-area {
     width: 100%;
-    /* background-color: var(--colorSecondary); */
 }
 
 .uni-projects {
