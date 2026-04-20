@@ -12,6 +12,7 @@
 
 html {
     box-sizing: border-box;
+    scroll-padding-top: 125px;
 }
 
 ul, ol {
@@ -20,33 +21,17 @@ ul, ol {
 }
 
 body {
-    background-color: var(--colorSecondary);
     min-height: 100vh;
     min-height: 100dvh;
 }
-
-/* .hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1s;
-}
-
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-} */
-
-@media(prefers-reduced-motion) {
-    .hidden {
-        transition: none;
-    }
+main {
+    background-color: var(--colorSecondary);
+    color: var(--colorPrimary)
 }
 
 #nav-area {
     overflow: hidden;
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
     z-index: 999;
@@ -156,8 +141,6 @@ nav a.active-link {
 
 .carousel-container {
     position: relative;
-    margin-top: 7vh;
-    padding-top: 1.3vh;
     width: 100%;
 }
 
@@ -169,7 +152,7 @@ nav a.active-link {
 .slider {
     display: flex;
     /* aspect-ratio: 16 / 9; */
-    height: 66.5vh;
+    height: 100vh;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -185,6 +168,16 @@ nav a.active-link {
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
+    animation: sliderAnimation 1s linear 1s;
+}
+
+@keyframes sliderAnimation {
+    0% {
+        height: 100vh;
+    }
+    100% {
+        height: 65vh;
+    }
 }
 
 .slider-text {
@@ -305,18 +298,20 @@ nav a.active-link {
 
 /* projects and experience sections */
 
-#projects, #experience, #pcg, #shaders {
+#portfolio, #experience, #pcg, #shaders, #games {
     display: flex;
-    position: relative;
-    top: -14vh;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     font-family: var(--ff);
     font-optical-sizing: auto;
     font-size: clamp(0.8rem, -1.5rem + 2.5vw, 1.3rem);
     font-style: normal;
     padding-top: 10rem;
+}
+
+#games {
+    max-width: 60rem;
 }
 
 #experience {
@@ -333,37 +328,44 @@ em {
     font-style: normal;
 }
 
-#projects h1, #experience h1, #pcg h1, #shaders h1{
+#portfolio h1, #experience h1, #pcg h1, #shaders h1, #games h1 {
     font-size: clamp(2rem, -1.5rem + 8.5vw, 4rem);
     font-weight: bold;
     color: var(--redAccent);
     padding-bottom: 2rem;
 }
 
-#projects h2, #experience h2 {
+#portfolio h2, #experience h2, #games h2 {
     font-weight: normal;
     color: var(--redAccent);
     font-size:clamp(1.5rem, -1.5rem + 2.5vw, 2rem);
 }
 
-#experience h3 {
+#experience h3 , #games h3{
     font-weight: normal;
     color: var(--blueAccent);
 }
 
 .project-area {
     display: flex;
-    flex-direction: row;
+    flex: 1 1 0;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     max-width: 100rem;
     margin: 0 auto;
-    padding-bottom: 5rem;
+    margin-bottom: 1rem;
 }
 
 .project-images {
     display: flex;
     flex-direction: column;
+}
+
+.project-text {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: start;
 }
 
 .pcg-area {
@@ -439,14 +441,6 @@ hr {
     width: 10vw;
 }
 
-.project-text {
-    display: flex;
-    width: 60%;
-    flex-direction: column;
-    justify-content: start;
-    padding: 0 1rem 0 1rem;
-}
-
 .unreal-area {
     width: 100%;
 }
@@ -463,6 +457,11 @@ hr {
 .text-left {
     align-items: start;
     text-align: left;
+}
+
+.text-middle {
+    align-items: center;
+    text-align: center;
 }
 
 .uni-area {
@@ -610,7 +609,7 @@ hr {
     position: absolute;
     flex-direction: column;
     width: 38vw;
-    padding: 3.6% 0 0 1.4%;
+    padding: 3.6% 0 0 1.7%;
 }
 #option-buttons button {
     text-align: start;
