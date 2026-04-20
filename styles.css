@@ -413,16 +413,16 @@ nav a.active-link {
     font-optical-sizing: auto;
     font-size: clamp(0.8rem, -1.5rem + 2.5vw, 1.3rem);
     font-style: normal;
-    padding-top: 8rem;
+    margin-top: 8rem;
 }
 
 #games {
     max-width: 60rem;
-    padding-top: 2rem;
+    margin-top: 5rem;
 }
 
 #pcg, #shaders {
-    padding-top: 5rem;
+    margin-top: 5rem;
 }
 
 em {
@@ -453,7 +453,7 @@ em {
     display: flex;
     flex: 1 1 0;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     max-width: 100rem;
     margin: 0 auto;
     margin-bottom: 1rem;
@@ -465,8 +465,8 @@ em {
 }
 
 .project-text {
-    display: flex;
-    width: 30%;
+    text-align: justify;
+    width:60%;
     flex-direction: column;
     justify-content: start;
 }
