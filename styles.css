@@ -152,7 +152,6 @@ nav a.active-link {
 .slider {
     display: flex;
     /* aspect-ratio: 16 / 9; */
-    height: 100vh;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -166,16 +165,18 @@ nav a.active-link {
 
 .slider img {
     flex: 1 0 100%;
+    height: 100vh;
+    width: 100%;
     scroll-snap-align: start;
     object-fit: cover;
-    animation: sliderAnimation 1s linear 1s;
+    animation: sliderAnimation 1s ease-in 2s forwards;
 }
 
 @keyframes sliderAnimation {
-    0% {
+    from {
         height: 100vh;
     }
-    100% {
+    to {
         height: 65vh;
     }
 }
@@ -233,11 +234,116 @@ nav a.active-link {
     opacity: 1;
 }
 
+/* pixel art portrait dialogue */
+  
+.dialogue {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    top: -3rem;
+    padding-top: rem;
+    margin: 0;
+}
+
+.dialogue-area {
+    display: flex;
+    transform: translateX(100vw);
+    animation: slideLeft 1s ease-out 4s forwards;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.options-area{
+    display: flex;
+    transform: translateX(-100vw);
+    animation: slideRight 1s ease-out 6s forwards;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+#dialogue-background {
+    width: 40vw;
+}
+
+#options-background {
+    width: 40vw;
+}
+
+#dialogue-text {
+    font-family: 'Public Pixel', sans-serif;
+    display: inline-block;
+    text-align: justify;
+    position: absolute;
+    width: 60%;
+    padding: 10% 0 0 5%;
+    font-optical-sizing: auto;
+    font-size: clamp(0.5rem, -0.0159rem + 0.6349vw, 1rem);
+    font-style: normal;
+    color: var(--colorPrimary);
+    /* animation: typing 2s steps(40, end);
+    overflow: hidden;
+    white-space: nowrap; */
+}
+
+/* @keyframes typing {
+    0% {width: 0}
+    100% {width: 42%}
+} */
+
+#option-buttons {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 95%;
+    padding: 9% 0 0 5%;
+}
+#option-buttons button {
+    text-align: start;
+}
+
+#option-buttons button {
+    font-family: 'Public Pixel', sans-serif;
+    font-optical-sizing: auto;
+    font-size: clamp(0.5rem, -0.0159rem + 0.6349vw, 1rem);
+    font-style: normal;
+    border-color: var(--colorSecondary);
+    border-style: outset;
+    margin-bottom: 0.1vw;
+    padding: 0.6vw;
+    color: var(--colorPrimary);
+    transition: color 400ms ease;
+}
+
+#option-buttons button:hover {
+    color: var(--redAccent);
+    border-style: inset;
+}
+
+@media screen and (max-width: 1300px) {
+    .dialogue {
+        display: none;
+    }
+}
+
 /* scroll arrow */
 
-.scroll-section {
+.scroll-area {
     position: relative;
-    top: -20vh;
+    top: 10vh;
 }
 
 .scroll-text {
@@ -307,15 +413,12 @@ nav a.active-link {
     font-optical-sizing: auto;
     font-size: clamp(0.8rem, -1.5rem + 2.5vw, 1.3rem);
     font-style: normal;
-    padding-top: 10rem;
+    padding-top: 8rem;
 }
 
 #games {
     max-width: 60rem;
-}
-
-#experience {
-    padding-top: 2.2rem;
+    padding-top: 2rem;
 }
 
 #pcg, #shaders {
@@ -556,94 +659,9 @@ hr {
 }
 
 
-/* pixel art portrait dialogue */
-  
-.dialogue {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    top: -3rem;
-    padding-top: rem;
-    margin: 0;
-}
-
-.dialogue-area {
-    display: flex;
-}
-
-.options-area {
-    display: flex;
-}
-
-#dialogue-background {
-    width: 40vw;
-}
-
-#options-background {
-    width: 40vw;
-}
-
-#dialogue-text {
-    font-family: 'Public Pixel', sans-serif;
-    display: inline-block;
-    text-align: justify;
-    width: 25%;
-    position: absolute;
-    padding: 3.6% 0 0 1.4%;
-    font-optical-sizing: auto;
-    font-size: clamp(0.5rem, -0.0159rem + 0.6349vw, 1rem);
-    font-style: normal;
-    color: var(--colorPrimary);
-    /* animation: typing 2s steps(40, end);
-    overflow: hidden;
-    white-space: nowrap; */
-}
-
-/* @keyframes typing {
-    0% {width: 0}
-    100% {width: 42%}
-} */
-
-#option-buttons {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    width: 38vw;
-    padding: 3.6% 0 0 1.7%;
-}
-#option-buttons button {
-    text-align: start;
-}
-
-#option-buttons button {
-    font-family: 'Public Pixel', sans-serif;
-    font-optical-sizing: auto;
-    font-size: clamp(0.5rem, -0.0159rem + 0.6349vw, 1rem);
-    font-style: normal;
-    border-color: var(--colorSecondary);
-    border-style: outset;
-    margin-bottom: 0.1vw;
-    padding: 0.6vw;
-    color: var(--colorPrimary);
-    transition: color 400ms ease;
-}
-
-#option-buttons button:hover {
-    color: var(--redAccent);
-    border-style: inset;
-}
-
-@media screen and (max-width: 1300px) {
-    .dialogue {
-        display: none;
-    }
-}
+/* behaviour for mobile navbar menu*/
 
 @media screen and (max-width: 1000px) {
-
-    main {
-        margin-top: 6vh;
-    }
 
     #open-menu-button, #close-menu-button, #small-logo {
         display: block;
