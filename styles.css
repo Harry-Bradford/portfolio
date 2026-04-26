@@ -254,9 +254,11 @@ nav a.active-link {
 @keyframes slideLeft {
     from {
         transform: translateX(100vw);
+        opacity: 0;
     }
     to {
         transform: translateX(0);
+        opacity: 1;
     }
 }
 
@@ -269,9 +271,11 @@ nav a.active-link {
 @keyframes slideRight {
     from {
         transform: translateX(-100vw);
+        opacity: 0;
     }
     to {
         transform: translateX(0);
+        opacity: 1;
     }
 }
 
@@ -404,9 +408,19 @@ nav a.active-link {
 
 /* projects and experience sections */
 
-#portfolio, #experience, #pcg, #shaders, #games {
+#experience, #pcg, #shaders, #games {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff);
+    font-optical-sizing: auto;
+    font-size: clamp(0.8rem, -1.5rem + 2.5vw, 1.3rem);
+    font-style: normal;
+    margin-top: 8rem;
+}
+
+#portfolio {
     justify-content: center;
     align-items: center;
     font-family: var(--ff);
@@ -548,10 +562,6 @@ hr {
     width: 100%;
 }
 
-.project-text li::marker {
-    color: var(--redAccent);
-}
-
 .text-right {
     align-items: end;
     text-align: right;
@@ -603,6 +613,17 @@ hr {
     opacity: 0.5;
 }
 
+.portfolio-area {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    list-style: none;
+}
+
+.portfolio-area img{
+    max-width: 12.5vw;
+    aspect-ratio: 1 / 1;
+}
 
 /* Let's connect area */
 
