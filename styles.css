@@ -1,14 +1,21 @@
+/* ----------------------------------------------------------------------- */
+/* Setting parameters */
+
 :root {
-    --colorPrimary: #e9e8e5;
+    --colorPrimary: #DBDBDB;
     --colorSecondary: #353535;
     --redAccent: #b34934;
     --blueAccent: #4895ba;
-    --ff: "Titillium Web", serif;
+    --greenAccent: #9FC490;
+    --bodyFont: "Roboto Mono", monospace;
+    --headingFont: "Montserrat", sans-serif;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
 }
+
+/* behaviour for overall site structure */
 
 html {
     box-sizing: border-box;
@@ -24,10 +31,15 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
 }
+
 main {
     background-color: var(--colorSecondary);
-    color: var(--colorPrimary)
+    color: var(--colorPrimary);
+    line-height: normal;
 }
+
+/* ----------------------------------------------------------------------- */
+/* Navigation menu */
 
 #nav-area {
     overflow: hidden;
@@ -38,10 +50,10 @@ main {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
 
 nav {
-    font-family: var(--ff);
+    font-family: var(--headingFont);
     font-optical-sizing: auto;
     font-size: 30px;
-    font-weight: bold;
+    font-weight: 900;
     font-style: normal;
     background-color: var(--colorSecondary);
 }
@@ -137,6 +149,60 @@ nav a.active-link {
     fill: var(--colorPrimary)
 }
 
+/* behaviour for mobile navbar menu*/
+
+@media screen and (max-width: 1000px) {
+
+    #open-menu-button, #close-menu-button, #small-logo {
+        display: block;
+    }
+
+    .small-nav, #navbar .logo-row {
+        display: flex;
+    }
+
+    #big-logo {
+        display: none;
+        padding: 0;
+    }
+
+    #navbar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        transition: right 500ms ease-out;
+        z-index: 999;
+    }
+
+    nav li:nth-child() {
+        margin-left: auto;
+    }
+
+    #navbar.show {
+        right: 0;
+    }
+
+    #navbar ul {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    #navbar li {
+        border-bottom: solid 1px var(--colorPrimary);
+        width: 100%;
+    }
+
+    #navbar li a {
+        width: 100%;
+    }
+}
+
+
+/* ----------------------------------------------------------------------- */
 /* Hero slider */
 
 .carousel-container {
@@ -182,33 +248,30 @@ nav a.active-link {
 }
 
 .slider-text {
-    width: 50%;
     position: absolute;
     top: 5%;
-    left: 1.25rem;
-    font-family: var(--ff);
+    right: 2rem;
+    font-family: var(--headingFont);
     font-optical-sizing: auto;
-    font-size: clamp(1.5rem, -1.5rem + 6vw, 2rem);
     font-style: normal;
     color: var(--redAccent);
+    text-align: end;
 }
 
 .slider-text h1 {
-    font-family: var(--ff);
     font-optical-sizing: auto;
-    font-size: clamp(3rem, -1.5rem + 8vw, 4rem);
-    font-weight: bold;
+    font-size: clamp(1.75rem, 0.8333rem + 3.2593vw, 4.5rem);
+    font-weight: 900;
     font-style: normal;
-    color: #054a76
 }
 
 .slider-text h2 {
-    font-family: var(--ff);
+    font-family: var(--headingFont);
     font-optical-sizing: auto;
-    font-size: clamp(2rem, -1.5rem + 6vw, 3rem);
+    font-size: clamp(1.25rem, 0.6667rem + 2.0741vw, 3rem);
     font-style: normal;
-    color: var(--colorPrimary);
-
+    color: var(--colorSecondary);
+    font-weight: bold;
 }
 
 .slider-nav {
@@ -234,6 +297,7 @@ nav a.active-link {
     opacity: 1;
 }
 
+/* ----------------------------------------------------------------------- */
 /* pixel art portrait dialogue */
   
 .dialogue {
@@ -297,6 +361,7 @@ nav a.active-link {
     font-optical-sizing: auto;
     font-size: clamp(0.5rem, -0.0159rem + 0.6349vw, 1rem);
     font-style: normal;
+    line-height: 1.5;
     color: var(--colorPrimary);
     /* animation: typing 2s steps(40, end);
     overflow: hidden;
@@ -343,6 +408,7 @@ nav a.active-link {
     }
 }
 
+/* ----------------------------------------------------------------------- */
 /* scroll arrow */
 
 .scroll-area {
@@ -354,13 +420,13 @@ nav a.active-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: var(--ff);
+    font-family: var(--headingFont);
     font-optical-sizing: auto;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 800;
     font-style: normal;
     letter-spacing: 0.2rem;
-    color: var(--redAccent);
+    color: var(--greenAccent);
     opacity: 1;
     padding: 2rem;
 }
@@ -377,8 +443,8 @@ nav a.active-link {
     display: block;
     width: 20px;
     height: 20px;
-    border-bottom: 1px solid var(--redAccent);
-    border-right: 1px solid var(--redAccent);
+    border-bottom: 3px solid var(--greenAccent);
+    border-right: 3px solid var(--greenAccent);
     transform: rotate(45deg);
     margin: -10px;
     animation: animate 2s infinite;
@@ -406,14 +472,16 @@ nav a.active-link {
     }
 }
 
-/* projects and experience sections */
+/* ----------------------------------------------------------------------- */
+/* Games, Experience, Portfolio sections */
 
-#experience, #pcg, #shaders, #games {
+#experience, #games {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: var(--ff);
+    font-family: var(--bodyFont);
+    font-weight: 900;
     font-optical-sizing: auto;
     font-size: clamp(0.8rem, -1.5rem + 2.5vw, 1.3rem);
     font-style: normal;
@@ -423,10 +491,11 @@ nav a.active-link {
 #portfolio {
     justify-content: center;
     align-items: center;
-    font-family: var(--ff);
+    font-family: var(--headingFont);
     font-optical-sizing: auto;
     font-size: clamp(0.8rem, -1.5rem + 2.5vw, 1.3rem);
     font-style: normal;
+    font-weight: 900;
     margin-top: 8rem;
 }
 
@@ -440,27 +509,38 @@ nav a.active-link {
 }
 
 em {
-    color: #ce6337;
-    font-weight: normal;
+    color: var(--greenAccent);
     font-style: normal;
 }
 
 #portfolio h1, #experience h1, #pcg h1, #shaders h1, #games h1 {
-    font-size: clamp(2rem, -1.5rem + 8.5vw, 4rem);
-    font-weight: bold;
-    color: var(--redAccent);
+    font-family: var(--headingFont);
+    font-size: clamp(2.5rem, 2rem + 1.7778vw, 4rem);
+    font-weight: 900;
+    color: var(--colorPrimary);
     padding-bottom: 2rem;
 }
 
 #portfolio h2, #experience h2, #games h2 {
-    font-weight: normal;
     color: var(--redAccent);
-    font-size:clamp(1.5rem, -1.5rem + 2.5vw, 2rem);
+    font-size:clamp(0.75rem, 0.3333rem + 1.4815vw, 2rem);
 }
 
 #experience h3 , #games h3{
-    font-weight: normal;
+    padding-top: 1rem;
     color: var(--blueAccent);
+    font-size:clamp(1rem, 0.8333rem + 0.5926vw, 1.5rem);
+    font-weight: 400;
+}
+
+#experience p, #games p{
+    font-weight: 300;
+    font-size:clamp(0.875rem, 0.75rem + 0.4444vw, 1.25rem);
+}
+
+#experience p {
+    font-weight: 200;
+    font-size:clamp(0.75rem, 0.6667rem + 0.2963vw, 1rem);
 }
 
 .project-area {
@@ -469,6 +549,7 @@ em {
     align-items: center;
     justify-content: space-between;
     max-width: 100rem;
+    gap: 0.5rem;
     margin: 0 auto;
     margin-bottom: 1rem;
 }
@@ -485,59 +566,13 @@ em {
     justify-content: start;
 }
 
-.pcg-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 40%;
-}
-
-.pcg-area img{
-    aspect-ratio: 16 / 9;
-    border: solid thin var(--colorSecondary);
-    border-radius: 0.5rem;
-    width: 25vw;
-    margin: 1rem 1rem 1rem 1rem;
-    transition: opacity 400ms ease;
-}
-
-.material {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.materials-area .shader-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.materials-area img {
-    aspect-ratio: 5/4;
-    border-radius: 0.5rem;
-    width: 15vw;
-    margin: 1rem 1rem 1rem 1rem;
-}
-
 hr {
   border: 0;
   clear:both;
   display:block;
-  width: 96%;               
+  width: 96%;
   background-color:#FFFF00;
   height: 1px;
-}
-
-.shaders {
-    display: flex;
-    justify-content: end;
-    align-items: end;
-}
-.shader-text {
-    width: 100%;
 }
 
 .project-area img {
@@ -550,16 +585,8 @@ hr {
     margin: 1vh 0 1vh 0;
 }
 
-#dog {
-    width: 15%;
-}
-
 #thinktribe-logo {
     width: 10vw;
-}
-
-.unreal-area {
-    width: 100%;
 }
 
 .text-right {
@@ -589,8 +616,8 @@ hr {
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     gap: 2rem;
+    scrollbar-color: var(--colorPrimary) var(--colorSecondary);
 }
-
 
 .uni-projects div {
     display: flex;
@@ -613,18 +640,194 @@ hr {
     opacity: 0.5;
 }
 
-.portfolio-area {
+/* Responsive uni project scrollbar */
+@media (max-width: 1000px) {
+    .uni-projects img {
+        width: 40vw;
+    }
+
+    .project-area {
+        position: relative;
+        flex-direction: column;
+        max-width: 100rem;
+    }
+
+    .project-area img {
+        top: 0%;
+        width: 100%;
+    }
+
+    .project-text {
+        width: 80%;
+        bottom: 0%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .text-right {
+        align-items: start;
+        text-align: center;
+    }
+    
+    .text-left {
+        align-items: start;
+        text-align: center;
+    }
+
+    #experience  h1 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #experience div img {
+        display: none;
+    }
+
+    #experience a img {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .uni-projects img {
+        width: 80vw;
+    }
+}
+
+/* ----------------------------------------------------------- */
+/* Portfolio filters and grid */
+
+.portfolio-heading {
+    display: flex;
+    justify-content: center;
+}
+
+/* Container styles */
+.portfolio-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 1rem;
+    background-color: var(--redAccent);
+}
+
+/* Filter button styles */
+.filter-btn {
+    padding: 0.75rem 3.5rem;
+    background: transparent;
+    border: 2px solid #e0e0e0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--colorPrimary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: #4a90e2;
+    color: #4a90e2;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--redAccent);
+    border-color: var(--redAccent);
+    color: white;
+}
+
+/* Portfolio grid */
+.portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    list-style: none;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0rem;
+    max-width: 100vw;
+    margin: 0 auto;
 }
 
-.portfolio-area img{
-    max-width: 12.5vw;
+/* Individual portfolio items */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth hiding animation */
+.portfolio-item.hide {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+    position: absolute;
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-width: 0px;
+}
+
+.portfolio-item img {
+    opacity: 1;
+    transition: .5s ease;
+    width: 100%;
     aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
 }
 
+.portfolio-item-info {
+    opacity: 0;
+    transition: .5s ease;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.portfolio-item:hover img {
+    scale: 1.1;
+    opacity: 0.3;
+}
+
+.portfolio-item:hover .portfolio-item-info {
+  opacity: 1;
+}
+
+.portfolio-item-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+.portfolio-item-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: 0.5fr 0.5fr;
+    }
+    
+    .filter-btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+
+/* ------------------------------------------------------------------- */
 /* Let's connect area */
 
 #connect {
@@ -637,7 +840,7 @@ hr {
 }
 
 #connect h1{
-    font-family: var(--ff);
+    font-family: var(--headingFont);
     font-optical-sizing: auto;
     font-size: clamp(2rem, -1.5rem + 8.5vw, 4rem);
     font-weight: bold;
@@ -677,96 +880,4 @@ hr {
 
 #mail:hover {
     fill: red;
-}
-
-
-/* behaviour for mobile navbar menu*/
-
-@media screen and (max-width: 1000px) {
-
-    #open-menu-button, #close-menu-button, #small-logo {
-        display: block;
-    }
-
-    .small-nav, #navbar .logo-row {
-        display: flex;
-    }
-
-    #big-logo {
-        display: none;
-        padding: 0;
-    }
-
-    #navbar {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 100%;
-        transition: right 500ms ease-out;
-        z-index: 999;
-    }
-
-    nav li:nth-child() {
-        margin-left: auto;
-    }
-
-    #navbar.show {
-        right: 0;
-    }
-
-    #navbar ul {
-        width: 100%;
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-    }
-
-    #navbar li {
-        border-bottom: solid 1px var(--colorPrimary);
-        width: 100%;
-    }
-
-    #navbar li a {
-        width: 100%;
-    }
-
-    .project-area {
-        position: relative;
-        flex-direction: column;
-        max-width: 100rem;
-        margin: 0 auto;
-    }
-
-    .project-area img {
-        top: 0%;
-        width: 100%;
-    }
-
-    .project-text {
-        width: 80%;
-        bottom: 0%;
-        text-align: center;
-        align-items: center;
-    }
-
-    .text-right {
-        align-items: start;
-        text-align: center;
-    }
-    
-    .text-left {
-        align-items: start;
-        text-align: center;
-    }
-
-    #experience  h1 {
-        justify-content: center;
-        text-align: center;
-    }
-
-    /* .project-text li::marker {
-        display: none;
-    } */
-
 }

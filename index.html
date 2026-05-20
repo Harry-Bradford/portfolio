@@ -10,6 +10,9 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
       <link href="https://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet">
       <title>Harry Bradford | Portfolio</title>
     </head>
@@ -59,13 +62,13 @@
             <div class="slider-wrapper">
               <div class="slider">
                 <img id="slide-1" src="Images/tsw-wallpaper.png" alt="slide 1">
-                <img id="slide-2" src="Images/placeholder-carousel-1.png" alt="slide 2">
-                <img id="slide-3" src="Images/placeholder-carousel-2.png" alt="slide 3">
+                <img id="slide-2" src="Images/metro-rivals-env.jpg" alt="slide 2">
+                <img id="slide-3" src="Images/Thomas-and-friends-promo.jpg" alt="slide 3">
                 <img id="slide-4" src="Images/placeholder-carousel-3.png" alt="slide 4">
               </div>
               <div class="slider-text">
-                <h1>Harry Bradford</h1>
-                <h2>/* QA Tester */</h2>
+                <h1>HARRY BRADFORD</h1>
+                <h2>QA TESTER</h2>
               </div>
               <div class="slider-nav">
                 <a href="#slide-1"></a>
@@ -123,7 +126,7 @@
               </div>
             </div>
             <div class="container project-area" id="tsw6">
-              <img src="Images/TSW6-wallpaper.jpg" alt="TSW6-img">
+              <img src="Images/tsw6-wallpaper.jpg" alt="TSW6-img">
               <div class="project-text text-middle">
                 <h3>Train Sim World 6</h3>
                 <p>2025</p>
@@ -208,7 +211,7 @@
                 <h2>Dovetail Games</h2>
                 <h3>QA Tester</h3>
                 <p>Games tested on <b>Steam</b>, <b>Epic Games</b>, <b>Windows</b>, <b>PS5</b>, <b>PS4</b>, <b>Xbox One Series S + X</b>, <b>Xbox One</b>, <b>Nintendo Switch</b>, <b>Roblox</b>, and <b>Meta Quest</b>.</p>
-                <p>Embedded testing for tools used in our <b>UE5</b> engine and the TSW PC Editor, public modding software based on <b>UE4</b>. Created internal QA tools and owner of <b>Confluence</b> documentation hubs, improving efficiency and training processes. Deputized as QA Lead across multiple projects - coordinating team and build sign-off's</p>
+                <p>Additional responsibilities included embedded testing for tools used in our <b>UE5</b> engine and the TSW PC Editor - public modding software based on <b>UE4</b>. Created internal QA tools and owner of <b>Confluence</b> documentation hubs, improving efficiency and training processes. Deputized as QA Lead across multiple projects - coordinating team and build sign-off's.</p>
               </div>
               <img src="Images/dtg_logo.jpg" alt="dtg-img">
             </div>
@@ -264,18 +267,112 @@
             </div>
           </section>
 
-          <section class="container-fluid hidden" id="portfolio">
-            <h1>PORTFOLIO</h1>
-            <div class="container-fluid portfolio-area">
-              <li><a href=""><img src="Images/pcg-splines.gif" alt="pcg-splines"></a></li>
-              <li><a><img src="Images/UE5-showcase.gif" alt="blueprints-showcase"></a></li>
-              <li><a><img src="Images/ice-block.gif" alt="blueprints-showcase"></a></li>
-              <li><a><img src="Images/Neural Network.gif" alt="neural-network-shader"></a></li>
-              <li><a><img src="Images/tsw-editor.png" alt="project-2-img"></a></li>
-              <li><a><img src="Images/galaga-clip.gif" alt="project-2-img"></a></li>
-              <li><a><img src="Images/photo-filter.gif" alt="project-2-img"></a></li>
-              <li><a><img src="Images/platformer.gif" alt="space-platformer"></a></li>
-            </div>
+          <section id="portfolio">
+            <div class="portfolio-heading"><h1>PORTFOLIO</h1></div>
+
+            <!-- Filter Navigation -->
+            <nav class="portfolio-filters" aria-label="Portfolio filters">
+                <button class="filter-btn active" data-filter="all">ALL PROJECTS</button>
+                <button class="filter-btn" data-filter="procgen">PROC GEN</button>
+                <button class="filter-btn" data-filter="shaders">SHADERS</button>
+                <button class="filter-btn" data-filter="vfx">VFX</button>
+                <button class="filter-btn" data-filter="models">MODELS</button>
+                <button class="filter-btn" data-filter="code">CODE</button>
+            </nav>
+
+            <!-- Portfolio Grid -->
+            <section class="portfolio-grid">
+                <article class="portfolio-item web" data-category="web">
+                    <img src="Images/matcap.gif" alt="E-commerce Platform Dashboard" loading="lazy">
+                    <div class="portfolio-item-info">
+                        <h3>E-commerce Platform</h3>
+                        <p>Full-stack React application with Stripe integration</p>
+                    </div>
+                </article>
+
+                <article class="portfolio-item mobile" data-category="mobile">
+                    <img src="Images/UE5-showcase.gif" alt="Fitness Tracking Mobile App" loading="lazy">
+                    <div class="portfolio-item-info">
+                        <h3>Fitness Tracker</h3>
+                        <p>React Native app with health API integration</p>
+                    </div>
+                </article>
+
+                <article class="portfolio-item design web" data-category="design web">
+                    <img src="Images/ice-block.gif" alt="SaaS Dashboard Design" loading="lazy">
+                    <div class="portfolio-item-info">
+                        <h3>SaaS Dashboard</h3>
+                        <p>Modern analytics dashboard with dark mode support</p>
+                    </div>
+                </article>
+
+                <article class="portfolio-item design web" data-category="design web">
+                    <img src="Images/Neural Network.gif" alt="SaaS Dashboard Design" loading="lazy">
+                    <div class="portfolio-item-info">
+                        <h3>SaaS Dashboard</h3>
+                        <p>Modern analytics dashboard with dark mode support</p>
+                    </div>
+                </article>
+
+                <article class="portfolio-item design web" data-category="design web">
+                    <img src="Images/tsw-editor.png" alt="SaaS Dashboard Design" loading="lazy">
+                    <div class="portfolio-item-info">
+                        <h3>SaaS Dashboard</h3>
+                        <p>Modern analytics dashboard with dark mode support</p>
+                    </div>
+                </article>
+
+                <article class="portfolio-item design web" data-category="design web">
+                    <img src="Images/galaga-clip.gif" alt="SaaS Dashboard Design" loading="lazy">
+                    <div class="portfolio-item-info">
+                        <h3>SaaS Dashboard</h3>
+                        <p>Modern analytics dashboard with dark mode support</p>
+                    </div>
+                </article>
+                <article class="portfolio-item design web" data-category="design web">
+                    <img src="Images/photo-filter.gif" alt="SaaS Dashboard Design" loading="lazy">
+                    <div class="portfolio-item-info">
+                        <h3>SaaS Dashboard</h3>
+                        <p>Modern analytics dashboard with dark mode support</p>
+                    </div>
+                </article>
+                <article class="portfolio-item design web" data-category="design web">
+                    <img src="Images/placeholder-carousel-1.png" alt="SaaS Dashboard Design" loading="lazy">
+                    <div class="portfolio-item-info">
+                        <h3>SaaS Dashboard</h3>
+                        <p>Modern analytics dashboard with dark mode support</p>
+                    </div>
+                </article>
+                <article class="portfolio-item design web" data-category="design web">
+                    <img src="Images/placeholder-carousel-1.png" alt="SaaS Dashboard Design" loading="lazy">
+                    <div class="portfolio-item-info">
+                        <h3>SaaS Dashboard</h3>
+                        <p>Modern analytics dashboard with dark mode support</p>
+                    </div>
+                </article>
+                <article class="portfolio-item design web" data-category="design web">
+                    <img src="Images/placeholder-carousel-1.png" alt="SaaS Dashboard Design" loading="lazy">
+                    <div class="portfolio-item-info">
+                        <h3>SaaS Dashboard</h3>
+                        <p>Modern analytics dashboard with dark mode support</p>
+                    </div>
+                </article>
+                <article class="portfolio-item design web" data-category="design web">
+                    <img src="Images/placeholder-carousel-2.png" alt="SaaS Dashboard Design" loading="lazy">
+                    <div class="portfolio-item-info">
+                        <h3>SaaS Dashboard</h3>
+                        <p>Modern analytics dashboard with dark mode support</p>
+                    </div>
+                </article>
+                <article class="portfolio-item design web" data-category="design web">
+                    <img src="Images/placeholder-carousel-1.png" alt="SaaS Dashboard Design" loading="lazy">
+                    <div class="portfolio-item-info">
+                        <h3>SaaS Dashboard</h3>
+                        <p>Modern analytics dashboard with dark mode support</p>
+                    </div>
+                </article>
+            </section>
+          </section>
 
           <section class="container-fluid" id="connect">
             <h1>Let's Connect!</h1>

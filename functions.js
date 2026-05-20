@@ -73,6 +73,66 @@ window.addEventListener('scroll', scrollHandler);
 
 
 
+// Portfolio filter functionality
+class PortfolioFilter {
+    constructor() {
+        this.filterButtons = document.querySelectorAll('.filter-btn');
+        this.portfolioItems = document.querySelectorAll('.portfolio-item');
+        this.init();
+    }
+
+    init() {
+        this.filterButtons.forEach(button => {
+            button.addEventListener('click', (e) => this.handleFilter(e));
+        });
+    }
+
+    handleFilter(e) {
+        const targetButton = e.currentTarget;
+        const filterValue = targetButton.dataset.filter;
+
+        // Update active button state
+        this.updateActiveButton(targetButton);
+
+        // Filter portfolio items
+        this.filterItems(filterValue);
+    }
+
+    updateActiveButton(activeButton) {
+        this.filterButtons.forEach(btn => btn.classList.remove('active'));
+        activeButton.classList.add('active');
+    }
+
+    filterItems(category) {
+        this.portfolioItems.forEach(item => {
+            const itemCategories = item.dataset.category.split(' ');
+            
+            if (category === 'all' || itemCategories.includes(category)) {
+                this.showItem(item);
+            } else {
+                this.hideItem(item);
+            }
+        });
+    }
+
+    showItem(item) {
+        item.classList.remove('hide');
+        // Force reflow for smooth animation
+        void item.offsetWidth;
+    }
+
+    hideItem(item) {
+        item.classList.add('hide');
+    }
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    new PortfolioFilter();
+});
+
+
+
 // script for the dialogue system
 
 const textElement = document.getElementById('dialogue-text')
