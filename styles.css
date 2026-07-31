@@ -707,15 +707,18 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 1rem;
-    background-color: var(--redAccent);
+    padding: 1rem 0 0 0;
+    gap: 0.5rem;
+    border-top: 1px solid var(--colorSecondary);
 }
 
 /* Filter button styles */
 .filter-btn {
     padding: 0.75rem 3.5rem;
     background: transparent;
-    border: 2px solid #e0e0e0;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px 20px 0% 0%;
+    border-bottom-color:transparent;
     font-size: 1rem;
     font-weight: 500;
     color: var(--colorPrimary);
@@ -724,15 +727,18 @@ hr {
 }
 
 .filter-btn:hover {
-    border-color: #4a90e2;
-    color: #4a90e2;
-    transform: translateY(-2px);
+    border-color: var(--colorSecondary);
+    color: var(--colorSecondary);
+    /* transform: translateY(-2px); */
 }
 
 .filter-btn.active {
-    background: var(--redAccent);
-    border-color: var(--redAccent);
-    color: white;
+    background: var(--blueAccent);
+    border-color: var(--blueAccent);
+    border-bottom-color: transparent;
+    border-radius: 20px 20px 0% 0%;
+    color: var(--colorPrimary);
+    scale: 1 1 ;
 }
 
 /* Portfolio grid */

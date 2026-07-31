@@ -178,7 +178,7 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: 'Hi there, welcome to my portfolio site!',
+        text: 'Hi there, welcome to my portfolio site',
         options: [
             {
                 text: 'Hi!',
