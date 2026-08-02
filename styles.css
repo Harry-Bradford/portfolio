@@ -709,7 +709,7 @@ hr {
     justify-content: center;
     padding: 1rem 0 0 0;
     gap: 0.5rem;
-    border-top: 1px solid var(--colorSecondary);
+    border-bottom: 1px solid var(--colorPrimary);
 }
 
 /* Filter button styles */
@@ -727,9 +727,11 @@ hr {
 }
 
 .filter-btn:hover {
-    border-color: var(--colorSecondary);
-    color: var(--colorSecondary);
-    /* transform: translateY(-2px); */
+    border-color: var(--blueAccent);
+    border-bottom-color:transparent;
+    color: var(--blueAccent);
+    transform: translateY(-2px);
+    /* scale: 1 1.2 ; */
 }
 
 .filter-btn.active {
@@ -738,7 +740,11 @@ hr {
     border-bottom-color: transparent;
     border-radius: 20px 20px 0% 0%;
     color: var(--colorPrimary);
-    scale: 1 1 ;
+    /* scale: 1 1.1 ; */
+}
+
+.filter-btn.active:hover {
+    transform: translateY(0px);
 }
 
 /* Portfolio grid */
