@@ -475,7 +475,7 @@ nav a.active-link {
 /* ----------------------------------------------------------------------- */
 /* Games, Experience, Portfolio sections */
 
-#experience, #games {
+#experience, #games{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -513,7 +513,7 @@ em {
     font-style: normal;
 }
 
-#portfolio h1, #experience h1, #pcg h1, #shaders h1, #games h1 {
+#portfolio h1, #experience h1, #pcg h1, #shaders h1, #games h1, #connect h1{
     font-family: var(--headingFont);
     font-size: clamp(2.5rem, 2rem + 1.7778vw, 4rem);
     font-weight: 900;
@@ -848,17 +848,9 @@ hr {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    margin: 0;
+    margin-top: 6rem;
 }
 
-#connect h1{
-    font-family: var(--headingFont);
-    font-optical-sizing: auto;
-    font-size: clamp(2rem, -1.5rem + 8.5vw, 4rem);
-    font-weight: bold;
-    color: var(--redAccent);
-    padding-bottom: 1rem;
-}
 
 #connect .logo-row {
     display: flex;
