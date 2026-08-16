@@ -175,615 +175,401 @@ function selectOption(option) {
     showTextNode(nextTextNodeId)
 }
 
+
 const textNodes = [
     {
         id: 1,
-        text: 'Hi there, welcome to my portfolio site',
+        text: 'Hi there, welcome to my portfolio!',
         options: [
             {
-                text: 'Hi!',
-                setState: {teamQuestion: true, ourTeam: false},
-                nextText: 2
+                text: 'Hello...',
+                nextText: 4
             },
             {
-                text: 'Erm... Hello?',
-                setState: {teamQuestion: true, ourTeam: false},
-                nextText: 15
+                text: 'Who are you?',
+                nextText: 4
+            },
+            {
+                text: 'I just want to browse.',
+                nextText: 2
             },
         ]
     },
     {
         id: 2,
-        text: 'Hope you don\'t mind me asking - are you looking to recruit someone (me?), or just having a look?',
+        text: 'No problem! I\'ll just be up here if you want to ask me anything.',
         options: [
             {
-                text: 'Just browsing.',
+                text: 'Okay I\'d like to ask you something.',
                 setState: {browsing: true, recruiter: false},
                 nextText: 3
-            },
-            {
-                text: 'I need someone!',
-                setState: {browsing: false, recruiter: true},
-                nextText: 19
             }
         ]
     },
     {
         id: 3,
-        text: 'Fair enough! Well feel free to browse some more, or we can try and see how engaging our conversations could be with me being an NPC?',
+        text: 'Of course, shoot!',
         options: [
             {
-                text: 'Like I said, I am just browsing.',
+                text: 'Who are you?',
                 nextText: 4
-            },
-            {
-                text: 'Sure, I guess.',
-                nextText: 6
-            },
+            }
         ]
     },
     {
         id: 4,
-        text: 'Okay that\'s fine! Well I\'ll be here if you want to ask me anything',
+        text: 'My name is Harry! I\'m a QA Tester at Dovetail Games and a hobbyist game dev.',
         options: [
             {
-                text: 'Okay I am actually a recruiter.',
-                nextText: 19
-            },
-            {
-                text: 'I guess we could talk.',
-                nextText: 6
-            },
-            {
-                text: 'Can we start over?',
+                text: 'QA?',
                 nextText: 5
+            },
+            {
+                text: 'Game Dev',
+                nextText: 18
+            },
+            {
+                text: 'Tell me more about yourself.',
+                nextText: 24
             },
         ]
     },
     {
         id: 5,
-        text: 'Good idea!',
+        text: 'I\'ve been in QA for over 5 years, working across games, websites, and mobile apps in the games and e-commerce industries.',
         options: [
             {
-                text: 'Thank you.',
-                nextText: 1
+                text: 'Is there anything special you bring to QA?',
+                nextText: 6
+            },
+            {
+                text: 'What are you currently doing?',
+                nextText: 12
+            },
+            {
+                text: 'Why QA?',
+                nextText: 15
+            },
+            {
+                text: 'Let\'s talk about something else.',
+                nextText: 4
             },
         ]
     },
     {
         id: 6,
-        text: 'That\'s the spirit! So... How\'s the weather wherever you are?',
+        text: 'Well, I am skilled in both manual and automated testing, I have plenty of technical knowledge, and a great understanding of the entire development pipeline of the software.',
         options: [
             {
-                text: 'Pretty good, suns out.',
-                nextText: 8
-            },
-            {
-                text: 'Horrible outside.',
+                text: 'What automated testing experience do you have?',
                 nextText: 7
             },
             {
-                text: 'Really? The weather?',
-                nextText: 40
-            }
-        ]
-    },
-    {
-        id: 40,
-        text: 'Well I\'m sorry just trying to make conversation! What do YOU want to talk about?',
-        options: [
-            {
-                text: 'It\'s fine, carry on.',
+                text: 'Tell me about your technical knowledge.',
                 nextText: 8
             },
             {
-                text: 'Nothing.',
-                nextText: 4
+                text: 'The pipeline?',
+                nextText: 10
             },
             {
-                text: 'Why don\'t I ask you something?',
-                nextText: 19
+                text: 'Let\'s discuss other QA topics.',
+                nextText: 5
             }
         ]
     },
     {
         id: 7,
-        text: 'Well that\'s annoying! Hope that isn\'t getting you too down.',
+        text: 'Maintaining and debugging our automated testing engine at thinkTRIBE, and creating scripts to simulate users navigating websites and mobile apps.',
         options: [
             {
-                text: 'I\'m fine.',
-                nextText: 8
-            },
-            {
-                text: 'I am miserable. I want to stop talking.',
-                nextText: 4
+                text: 'Tell me again about your QA specializations.',
+                nextText: 6
             },
         ]
     },
     {
         id: 8,
-        text: 'Nice, nice... So... what\'s your favourite game?',
+        text: 'With experience as an engineer, I know how a lot of systems work in the back-end. Along with my development in technical art - knowing 3D software and engines, I have a deeper understanding of the underlying problems behind many bugs.',
         options: [
             {
-                text: 'Skyrim.',
-                nextText: 9
-            },
-            {
-                text: 'Outer Wilds.',
-                nextText: 9
-            },
-            {
-                text: 'Hollow Knight.',
-                nextText: 9
-            },
-            {
-                text: 'Stardew Valley.',
+                text: 'How else does that help in QA?',
                 nextText: 9
             },
         ]
     },
     {
         id: 9,
-        text: 'Amazing! That\'s my favourite game too! How weird is that we both have the same favourite game...',
+        text: 'I have experience not only in finding bugs, but also fixing those bugs myself. I know exactly what is helpful for devs when discussing and troubleshooting bugs.',
         options: [
             {
-                text: 'Wow, really weird!',
-                nextText: 10
+                text: 'Tell me again about your QA specializations.',
+                nextText: 6
             },
-            {
-                text: 'Well you didn\'t give me much choice.',
-                nextText: 10
-            }
         ]
     },
     {
         id: 10,
-        text: 'Anyway... What else is the same? Hmmmm favourite music artist?',
+        text: 'I have a detailed understanding of how different teams operate to create software from shadowing developers, artists, technical artists, and designers. This is reinforced further by my projects outside of work, having a hand in QA, design, code, and art.',
         options: [
             {
-                text: 'Radiohead.',
-                nextText: 11
-            },
-            {
-                text: 'Pink Floyd.',
-                nextText: 11
-            },
-            {
-                text: 'Neil Young.',
-                nextText: 11
-            },
-            {
-                text: 'Portishead.',
+                text: 'Have you created anything that is player-facing at Dovetail?',
                 nextText: 11
             },
         ]
     },
     {
         id: 11,
-        text: 'No way! We both have the same favourite game, and favourite music artist, what are the odds?',
+        text: 'I have! I\'ve created data assets and PCG graphs for procedural building generation, accurately based on New York City, as well as environment shaders, both for Metro Rivals.',
         options: [
             {
-                text: 'Very impossible...',
-                nextText: 12
-            },
-            {
-                text: 'Okay can we stop now?',
-                nextText: 14
+                text: 'Tell me again about your QA specializations.',
+                nextText: 6
             },
         ]
     },
     {
         id: 12,
-        text: 'Oooh I know! Favourite movie??',
+        text: 'I am currently leading small tight-knit teams, testing various DLCs for our games, Train Sim World and other projects.',
         options: [
             {
-                text: 'Spirited Away.',
+                text: 'What tools do you use?',
                 nextText: 13
             },
             {
-                text: 'Interstellar.',
-                nextText: 13
+                text: 'Any additional responsibilities?',
+                nextText: 14
             },
             {
-                text: 'Kill Bill.',
-                nextText: 13
-            },
-            {
-                text: 'Kung Fu Panda.',
-                nextText: 13
+                text: 'Let\'s discuss other QA topics.',
+                nextText: 5
             },
         ]
     },
     {
         id: 13,
-        text: 'NO WAY! Are you cheating?',
+        text: 'Outside of the games, most of my time is spent in Jira, Confluence, and Excel. I also regularly use Jenkins, Perforce and Unreal Engine when embedded testing.',
         options: [
             {
-                text: 'Please stop.',
-                nextText: 14
-            },
-            {
-                text: 'Okay that\'s enough now.',
+                text: 'What are you doing again?',
                 nextText: 14
             },
         ]
     },
     {
         id: 14,
-        text: 'Okay okay you got me, I\'ll stop now! So what else can we talk about?',
+        text: 'Many! I create documentation hubs, develop tools, manage external test vendors, and even provide feedback on design and art.',
         options: [
             {
-                text: 'I am not speaking to you.',
-                nextText: 4
-            },
-            {
-                text: 'Why don\'t I ask you something?',
-                nextText: 19
-            },
+                text: 'What are you doing again?',
+                nextText: 14
+            }
         ]
     },
     {
         id: 15,
-        text: 'What\'s the matter? Never seen an NPC style dialogue system in a portfolio website before?',
+        text: 'Working for a game studio has always been a dream of mine and having such a crucial role in improving the quality of the game and making the experience better for the players is incredibly rewarding!',
         options: [
             {
-                text: 'Yeah all the time actually.',
+                text: 'What do you enjoy most about QA?',
                 nextText: 16
             },
             {
-                text: 'I guess not.',
-                nextText: 18
+                text: 'What makes you a good QA tester?',
+                nextText: 17
             },
             {
-                text: 'This is pretty weird.',
-                nextText: 17
+                text: 'Let\'s discuss other QA topics.',
+                nextText: 5
             }
         ]
     },
     {
         id: 16,
-        text: 'Oh really? That\'s embarrassing... Well could you just ignore that, I SWEAR I came up with this on my own.',
+        text: 'Oh, easily the investigation stage after finding a bug! I love figuring out why something is happening and how to reproduce it. Otherwise, it\'s finding ways to improve the team\'s morale and efficiency with finding new workflows or creating tools.',
         options: [
             {
-                text: 'Fine I will ignore it.',
-                nextText: 18
+                text: 'Let\'s go back.',
+                nextText: 15
             },
-            {
-                text: 'Can we just move this along?',
-                nextText: 18
-            }
         ]
     },
     {
         id: 17,
-        text: 'You don\'t like it? I thought it would add a personal touch, you can get to know me! Or we can have a conversation about LITERALLY anything?',
+        text: 'I am thorough and meticulous in understanding how features work and finding edge-cases, ways you wouldn\'t expect it to behave, and I\'m a great communicator so the current quality of games are truly understood by other departments.',
         options: [
             {
-                text: 'Okay fine, tell me about yourself then.',
-                nextText: 20
+                text: 'Let\'s go back.',
+                nextText: 15
             },
-            {
-                text: 'I guess we can have a conversation.',
-                nextText: 6
-            },
-            {
-                text: 'No I don\'t, leave me alone.',
-                nextText: 4
-            }
         ]
     },
     {
         id: 18,
-        text: 'Nice! So is there anything you want to ask me?',
+        text: 'Yes! I am currently part of a small team with multiple ongoing projects, having fun while also developing my skills and trying to succeed as an indie developer.',
         options: [
             {
-                text: 'Can you tell me a little about yourself?',
-                nextText: 20
+                text: 'What role do you have in your team?',
+                nextText: 19
             },
             {
-                text: 'No I don\'t, leave me alone.',
+                text: 'What are the games that inspire you most?',
+                nextText: 23
+            },
+            {
+                text: 'Let\'s talk about something else.',
                 nextText: 4
-            }
+            },
         ]
     },
     {
         id: 19,
-        text: 'Great! Feel free to ask me some questions and hopefully you like what you see and hear.',
+        text: 'Technical Artist, but I tend to take on many technical tasks. I enjoy working across disciplines and helping find solutions when something sits between art, design and programming.',
         options: [
             {
-                text: 'Tell me about yourself.',
-                setState: {engToGame: true},
+                text: 'Why Technical Art?',
                 nextText: 20
             },
             {
-                text: 'So you\'ve gone from engineering to gaming?',
-                requiredState: (CurrentState) => CurrentState.engToGame,
-                nextText: 25
+                text: 'What do you specialize in?',
+                nextText: 21
             },
             {
-                text: 'What can you bring to our team that\'s different?',
-                nextText: 31
+                text: 'What game engines do you have experience in?',
+                nextText: 22
             },
             {
-                text: 'What do you look for in a team?',
-                nextText: 32
+                text: 'You were saying about your game dev side-projects?',
+                nextText: 18
             },
         ]
     },
     {
         id: 20,
-        text: 'I am an incredibly dedicated QA tester with a background in programming and engineering, having over 4 years of professional experience. My strong work ethic and passion for creation, paired with my diverse background, I hope makes me a great addition to any team.',
+        text: 'I have always loved art as a hobby, so combining it with my other passion in programming is the dream! Having such an impact on the quality of a game\'s art is something that really drives me.',
         options: [
             {
-                text: 'What motivates you?',
-                nextText: 21
-            },
-            {
-                text: 'What do you like to do in your down time?',
-                nextText: 22
-            },
-            {
-                text: 'Where do you see yourself in the next 5 years?',
-                nextText: 24
-            },
-            {
-                text: 'I would like to ask you something else.',
+                text: 'Tell me about your role in the team.',
                 nextText: 19
             },
         ]
     },
     {
         id: 21,
-        text: 'I am a lifelong learner, my biggest motivation is gaining new knowledge and being able to achieve what I previously could not. Finding a way to apply my learning is what excites me, whether in programming, or art, the ability to create something new is my passion.',
+        text: 'Shaders and VFX are my specialties. Any excuse to make something beautiful with code!',
         options: [
             {
-                text: 'What do you like to do in your down time?',
-                nextText: 22
-            },
-            {
-                text: 'Where do you see yourself in the next 5 years?',
-                nextText: 24
-            },
-            {
-                text: 'I would like to ask you something else.',
+                text: 'Tell me about your role in the team.',
                 nextText: 19
             },
         ]
     },
     {
         id: 22,
-        text: 'Whenever you are reading this, chances are I\'m probably trying to create some kind of game, or I\'m playing one! If not, then I relax by watching a movie, or playing board games with my wife and family.',
+        text: 'Mostly Unreal Engine for my daily work, but I use Godot for projects outside of work. I also have experience with proprietary engines from developing mods for different games.',
         options: [
             {
-                text: 'Any other hobbies or activities?',
-                nextText: 23
+                text: 'Tell me about your role in the team.',
+                nextText: 19
             },
         ]
     },
     {
         id: 23,
-        text: 'Yes, I love to swim! I compete in galas throughout the year and try to train every morning. A big motivation for me is that there is always room for growth, I can always improve my race times, and hopefully pick up some medals on the way.',
+        text: 'My favourite games are those that have a strong identity, are truly innovative, and aren\'t afraid to push their genre in a new direction.',
         options: [
             {
-                text: 'What motivates you?',
-                nextText: 21
-            },
-            {
-                text: 'Where do you see yourself in the next 5 years?',
-                nextText: 24
-            },
-            {
-                text: 'I would like to ask you something else.',
-                nextText: 19
+                text: 'You were saying about your game dev side-projects?',
+                nextText: 18
             },
         ]
     },
     {
         id: 24,
-        text: 'I\'m someone who always has to be developing and improving, whether that\'s technical skills, or soft skills, there\'s always an opportunity to grow. That said, I see myself in the position where I\'m leading projects, and ideally helping those less experienced.',
+        text: 'You know, I am motivated most by learning new things. In fact, I\'ve never stopped learning, from teaching myself how to code at uni, to now learning game development. I most likely never will stop, there is always room to grow!',
         options: [
             {
-                text: 'What is your long term career goal?',
-                nextText: 33
-            }
+                text: 'What role are you looking for?',
+                nextText: 25
+            },
+            {
+                text: 'What do you look for in a team?',
+                nextText: 26
+            },
+            {
+                text: 'Where do you see yourself in the next 5 years?',
+                nextText: 25
+            },
+            {
+                text: 'Let\'s talk about something else.',
+                nextText: 4
+            },
         ]
     },
     {
         id: 25,
-        text: 'I enjoyed Engineering, especially the maths and lab work, but after using C to program a few robots, I fell in love with coding. I landed a job at thinkTribe the week before starting a masters in Computer Science. The games industry always felt like one of those "dream jobs" beyond me, but eventually I took the leap and a big paycut to do something I was really passionate about.',
+        text: 'I am searching for a role that is more than just traditional testing. I want to work closely with developers and help improve quality not only in the product but across the company as a whole.',
         options: [
             {
-                text: 'What is a game that has inspired you?',
-                setState: {stardew: true, wilds: true, witness: true, disco: true},
-                nextText: 26
+                text: 'Tell me about yourself again.',
+                nextText: 24
             },
         ]
     },
     {
         id: 26,
-        text: 'Wow there are so many, I refuse to pick just one! I will have to go with Stardew Valley, Outer Wilds, The Witness, and Disco Elysium.',
+        text: 'Are the team members set up for success, with good communication, collaboration, and a positive environment? If not, is the team open minded to change the practices? This is crucial to us as employees, and the company as a whole, to create the best game possible for the players.',
         options: [
             {
-                text: 'Stardew Valley?',
-                requiredState: (CurrentState) => CurrentState.stardew,
-                setState: {stardew: false},
-                nextText: 27
-            },
-            {
-                text: 'Outer Wilds?',
-                requiredState: (CurrentState) => CurrentState.wilds,
-                setState: {wilds: false},
-                nextText: 28
-            },
-            {
-                text: 'The Witness?',
-                requiredState: (CurrentState) => CurrentState.witness,
-                setState: {witness: false},
-                nextText: 29
-            },
-            {
-                text: 'Disco Elysum?',
-                requiredState: (CurrentState) => CurrentState.disco,
-                setState: {disco: false},
-                nextText: 30
+                text: 'Tell me about yourself again.',
+                nextText: 24
             },
         ]
     },
     {
         id: 27,
-        text: 'The game that I have put an embarrassingly huge amount of life into. This is what made me so passionate about games, what motivated me to play different games outside of the biggest AAA titles, and the fact it was made by one person, made me seriously think about the games industry as a career.',
+        text: 'No matter what role I am in, I see myself in a position where I\'m leading projects, and becoming a mentor, ideally helping those less experienced.',
         options: [
             {
-                text: 'Outer Wilds?',
-                requiredState: (CurrentState) => CurrentState.wilds,
-                setState: {wilds: false},
+                text: 'What is your long term career goal?',
                 nextText: 28
-            },
-            {
-                text: 'The Witness?',
-                requiredState: (CurrentState) => CurrentState.witness,
-                setState: {witness: false},
-                nextText: 29
-            },
-            {
-                text: 'Disco Elysum?',
-                requiredState: (CurrentState) => CurrentState.disco,
-                setState: {disco: false},
-                nextText: 30
-            },
-            {
-                text: 'I would like to ask you something else.',
-                nextText: 20
-            },
+            }
         ]
     },
     {
         id: 28,
-        text: 'I think Outer Wilds is the single greatest gameplay experience I have ever had, becoming truely lost in the game, actually feeling like an astronaut and archaeologist! The way you discover and solve problems throughout the game by sheer exploration has really made me think about the possibilities and impact that games can have.',
+        text: 'I would like to be a games industry veteran and spend many many years doing what I love! But, also to release my own indie game that has its own following and community, like the ones I include myself in now.',
         options: [
             {
-                text: 'Stardew Valley?',
-                requiredState: (CurrentState) => CurrentState.stardew,
-                setState: {stardew: false},
-                nextText: 27
-            },
-            {
-                text: 'The Witness?',
-                requiredState: (CurrentState) => CurrentState.witness,
-                setState: {witness: false},
-                nextText: 29
-            },
-            {
-                text: 'Disco Elysum?',
-                requiredState: (CurrentState) => CurrentState.disco,
-                setState: {disco: false},
-                nextText: 30
-            },
-            {
-                text: 'I would like to ask you something else.',
-                nextText: 20
+                text: 'Tell me about yourself again.',
+                nextText: 24
             },
         ]
-    },
-    {
-        id: 29,
-        text: 'This is one of the most unique games I have ever played, it\'s absolutely beautiful and the puzzles are actually part of the environment, amazing! But my favourite part about the game is how it teaches mechanics to the player, without hardly any tutorials. Getting the puzzles correct makes you feel like you have 250 IQ!',
-        options: [
-            {
-                text: 'Stardew Valley?',
-                requiredState: (CurrentState) => CurrentState.stardew,
-                setState: {stardew: false},
-                nextText: 27
-            },
-            {
-                text: 'Outer Wilds?',
-                requiredState: (CurrentState) => CurrentState.wilds,
-                setState: {wilds: false},
-                nextText: 28
-            },
-            {
-                text: 'Disco Elysum?',
-                requiredState: (CurrentState) => CurrentState.disco,
-                setState: {disco: false},
-                nextText: 30
-            },
-            {
-                text: 'I would like to ask you something else.',
-                nextText: 20
-            },
-        ]
-    },
-    {
-        id: 30,
-        text: 'An incredible game, not just narratively, but this is the title that inspired me just from how beautiful it is. It made me really think about artstyle in games and nudged me towards looking at technical art. This along with games like Return of the Obra Dinn, Journey, and Inscryption, has motivated me to one day make games that wow you from the visuals.',
-        options: [
-            {
-                text: 'Stardew Valley?',
-                requiredState: (CurrentState) => CurrentState.stardew,
-                setState: {stardew: false},
-                nextText: 27
-            },
-            {
-                text: 'Outer Wilds?',
-                requiredState: (CurrentState) => CurrentState.wilds,
-                setState: {wilds: false},
-                nextText: 28
-            },
-            {
-                text: 'The Witness?',
-                requiredState: (CurrentState) => CurrentState.witness,
-                setState: {witness: false},
-                nextText: 29
-            },
-            {
-                text: 'I would like to ask you something else.',
-                nextText: 20
-            },
-        ]
-    },
-    {
-        id: 31,
-        text: 'Being a passionate gamer, in addition to coming from QA, I feel that I have a very strong ability to put myself in the players mind. That, paired with my programming and engineering experience, makes me a decent problem solver who consistently thinks outside of the box for solutions.',
-        options: [
-            {
-                text: 'I would like to ask you something else.',
-                nextText: 19
-            },
-        ]
-    },
-    {
-        id: 32,
-        text: 'Are the team members set up for success, where there is there good communication, collaboration, and it is a positive environment? If not, is the team open minded to change the practices? These are crucial factors for us as employees, and the company as a whole, in order to create the best game possible for the players.',
-        options: [
-            {
-                text: 'I would like to ask you something else.',
-                nextText: 19
-            },
-        ]
-    },
-    {
-        id: 33,
-        text: 'I would like to be one of the games industry veterans and spend many many years doing what I love! But, my BIGGEST dream would be to release my own indie game that has its own following and community, like the ones I include myself in now.',
-        options: [
-            {
-                text: 'I would like to ask you something else.',
-                nextText: 19
-            },
-        ]
-    },
+    }    
 ]
 
 startGame()
 
-
-// I used to be what some call a "casual gamer" so FIFA and Call of Duty were my favourites when I was younger. Then Skyrim followed by Fallout 4
-
-// what do you look for in a role - Are the employees set up for success? 
-
-// dream - my 15 year old self would say I'm already living the dream in QA, but now I would have to say my dream (like many in this industry) would be to launch my own successful indie game
-
-// requiredState: (CurrentState) => CurrentState.blueGoo,
-
-// setState: {blueGoo: false, sword: true},
-
-// textElement.style.display = hidden;
+// Example of dialogue script:
+// const textnodes = [
+//     {
+//         id: 1,
+//         text: 'Hi there, welcome to my portfolio site!',
+//         options: [
+//             {
+//                 text: 'Hello...',
+//                 nextText: 2
+//             },
+//             {
+//                 text: 'Tell me about yourself.',
+//                 setState: {engToGame: true},
+//                 nextText: 20
+//             },
+//             {
+//                 text: 'So you\'ve gone from engineering to gaming?',
+//                 requiredState: (CurrentState) => CurrentState.engToGame,
+//                 nextText: 25
+//             },
+//         ]
+//     },
+// ]

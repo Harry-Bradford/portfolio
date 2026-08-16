@@ -354,7 +354,6 @@ nav a.active-link {
 #dialogue-text {
     font-family: 'Public Pixel', sans-serif;
     display: inline-block;
-    text-align: justify;
     position: absolute;
     width: 60%;
     padding: 10% 0 0 5%;
