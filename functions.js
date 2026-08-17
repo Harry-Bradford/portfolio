@@ -225,7 +225,7 @@ const textNodes = [
                 nextText: 5
             },
             {
-                text: 'Game Dev',
+                text: 'Game Dev?',
                 nextText: 18
             },
             {
